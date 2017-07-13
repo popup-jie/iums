@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>提现</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/base.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+
+	</head>
+	<body>
+		<div class="withdrawals">
+			<div class="topFiexdBtn">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>提现</div>
+			</div>
+			<div class="kong2"></div>
+			<div class="topTxt flex">
+				<div class="icon">
+					<img src="../../img/alipay_icon3.png" />
+				</div>
+				<div class="flex_item">
+					<div class="tops">支付宝账户</div>
+					<div class="topsg">账户:weyrt@163.com</div>
+				</div>
+				<div class="right_icon"><img src="../../img/right_icon2.png" /></div>
+			</div>
+			<div class="cons">
+				<div class="tpx">
+					提现金额
+				</div>
+				<div class="split">
+					<input type="tel"  placeholder="请输入需要提现的金额" />
+				</div>
+				<div class="reminfo">可用余额9223.91元</div>
+			</div>
+			<div class="kong"></div>
+			<div class="f">确认支付</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+		$(".topTxt").click(function(){
+			window.location.href = "myCash.html"
+		})
+	})
+</script>

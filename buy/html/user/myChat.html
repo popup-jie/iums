@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>发表评价</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/base.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+	</head>
+	<body>
+		<div class='myChat2'>
+			<div class="topFiexdBtn">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>发表评价</div>
+			</div>
+			<div class="kong2"></div>
+			<div class='cons'>
+				<textarea placeholder='写下购买体会和使用感受来帮助其他小伙伴~评价大于100的商品超过10个字就有机会获得积分~'></textarea>
+			</div>
+			<div class='f'>
+				<div class='list'>
+					<div class='name fl'>描述相符</div>
+					<div class='goodbad fl'>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/badicon.png'/>
+					</div>
+					<div class='clear'></div>
+				</div>
+				<div class='list'>
+					<div class='name fl'>发货速度</div>
+					<div class='goodbad fl'>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/badicon.png'/>
+					</div>
+					<div class='clear'></div>
+				</div>
+				<div class='list'>
+					<div class='name fl'>服务态度</div>
+					<div class='goodbad fl'>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/goodicon.png'/>
+						<img src='../../img/badicon.png'/>
+					</div>
+					<div class='clear'></div>
+				</div>
+			</div>
+			<div class='kong'></div>
+			<div class='footer'>
+				<a href=''>发表评价</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+		$('.goodbad').find("img").click(function(){
+			for(var i = 0; i < $(this).parent().find("img").length;i++){
+				$(this).parent().find("img").eq(i).attr("src","../../img/badicon.png")
+			}
+			for(var i = 0; i <= $(this).index();i++){
+				$(this).parent().find("img").eq(i).attr("src","../../img/goodicon.png")
+			}
+		})
+	})
+	</script>
+</html>

@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>修改手机号</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/center.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+	</head>
+	<body style="background: #fff">
+		<div class="topFiexdBtn">
+			<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+			<div>修改手机号</div>
+		</div>
+		<div class="kong2"></div>
+		<!-- 注册第一步 -->
+		<div class="login reg" id="regSteps">
+			<div class="kuang">
+				<div class="username flex">
+					<div class="icon"><img src="../../img/telphone_icon.png" /></div>
+					<div class="addnum">+86</div>
+					<div class="flex_item">
+						<input type="tel" placeholder="请输入手机号" />
+					</div>
+					<div class="getCode">获取验证码</div>
+				</div>
+				<div class="username flex userpass code">
+					<div class="icon"><img src="../../img/code.png" /></div>
+					<div class="flex_item">
+						<input type="tel" placeholder="请输入6位验证码" />
+					</div>
+				</div>
+			</div>
+			<div class="btn" id="red_next_btn">下一步</div>			
+		</div>
+		<!-- 注册第一步end -->
+		<!-- 注册完成 -->
+		<div class="login reg" style="display: none" id="regend">
+			<div class="kuang">
+				<div class="username flex">
+					<div class="icon"><img src="../../img/telphone_icon.png" /></div>
+					<div class="addnum">+86</div>
+					<div class="flex_item">
+						<input type="tel" placeholder="请输入手机号" />
+					</div>
+					<div class="getCode">获取验证码</div>
+				</div>
+				<div class="username flex userpass code">
+					<div class="icon"><img src="../../img/code.png" /></div>
+					<div class="flex_item">
+						<input type="tel" placeholder="请输入6位验证码" />
+					</div>
+				</div>
+			</div>
+			<div class="btn" id="submit">完成</div>			
+		</div>
+		<!-- 注册完成end -->
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+		//点击注册下一步
+		$("#regSteps .btn").click(function(){
+			$("#regSteps").hide();
+			$("#regend").show();
+		})
+		//修改手机号码
+		$("#regend .btn").click(function(){
+			alert(11);
+		})
+
+		//点击获取验证码
+		$(".getCode").click(function(){
+			var d = 59;
+			var _self = this;
+			$(_self).text(d+"秒后重新获取");
+			setTimeout(function(){
+				d--
+				if(d <=0){
+					$(_self).text("获取验证码");
+				}else{
+					$(_self).text(d+"秒后重新获取");
+					setTimeout(arguments.callee,1000)
+				}
+			},1000)
+			$(this).text()
+		})
+		
+	})
+</script>

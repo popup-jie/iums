@@ -1,0 +1,283 @@
+@import 'mixin.scss';
+
+.home{
+	background-image: url(../img/home_bg.jpg);
+	background-size: 100% 100%;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	.home_content{
+		position: absolute;
+		width: 100%;
+		.home_logo{
+			@include s_cale(371, 91);
+			margin-left: 22 / $cal * 1rem;;
+			margin-top: 130 / $cal * 1rem;
+		}
+		.home_title{
+			@include s_cale(554, 56);
+			margin-left: 59 / $cal * 1rem;;
+			margin-top: 29 / $cal * 1rem;
+		}
+		.home_pma{
+			@include s_cale(640, 422);
+			margin-top: 66 / $cal * 1rem;
+		}
+		.home_btn{
+			@include s_cale(242, 105);
+			margin: 0 auto;
+			margin-top: 55 / $cal * 1rem;
+		}
+	}
+}
+.result{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	.topFont{
+		position:absolute;
+		margin-top: 0.6rem;
+		left:50%;
+		transform: translate3d(-50%,0,0);
+		.fonta{
+			display: inline-block;
+			@include s_cale(235, 37);
+			vertical-align: top;
+			margin-top: 0.4rem;
+			margin-left: 0.2rem;
+		}
+		.fontb{
+			display: inline-block;
+			@include s_cale(169, 35);
+			vertical-align: top;
+			margin-top: 0.4rem;
+		}
+		.score{
+			font-weight: 200;
+			display: inline-block;
+			@include double_font(70);
+			vertical-align: top;
+			color: #af1e24;
+			margin: 0 0.2rem;
+		}
+	}
+	.btn{
+		position:fixed;
+		bottom: 80 / $cal * 1rem;
+		width: 100%;
+		.share_btn{
+			@include s_cale(290, 89);
+			margin: 0 auto;
+			margin-bottom: 20 / $cal * 1rem;
+		}
+		.choujiang{
+			@include s_cale(288, 89);
+			margin: 0 auto;
+			margin-bottom: 20 / $cal * 1rem;
+		}
+		.try_again{
+			@include s_cale(284, 89);
+			margin: 0 auto;
+		}
+	}
+}
+.submit{
+	background-image: url(../img/submit_bg.png);
+	background-size: 100% 100%;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	.cons{
+		position:absolute;
+		top: 194 / $cal * 1rem;
+		width: 100%;
+		.topText{
+			color: #74550c;
+			@include double_font(30);
+			text-align: center;
+			font-weight: bold;
+			margin-bottom: 55 / $cal * 1rem;
+		}
+		.list{
+			margin-left: 65 / $cal * 1rem;
+			margin-bottom: 50 / $cal * 1rem;
+		}
+		.names{
+			color: #1c1c1c;
+			@include double_font(30);
+			font-weight: bold;
+			line-height: 42 / $cal * 1rem;
+		}
+		.user{
+			.icon{
+				width: 50 / $cal * 1rem;
+				img{@include s_cale(43, 43);}
+			}
+		}
+		.phone{
+			.icon{
+				width: 50 / $cal * 1rem;
+				img{@include s_cale(42, 42);}
+			}
+		}
+		.location{
+			margin-bottom: 1rem;
+			.icon{
+				width: 50 / $cal * 1rem;
+				img{@include s_cale(37, 48);}
+			}
+		}
+		.input{
+			@include s_cale(288, 52);
+			border-bottom: 1px solid #aeadab;
+			color: #aeadab;
+			text-indent: 3px;
+			input{
+				border:0px;
+				outline: 0px;
+				background: url(0) no-repeat;
+				line-height: 42 / $cal * 1rem;
+				height: 42 / $cal * 1rem;
+				@include double_font(24);
+			}
+		}
+		.btna{
+			@include s_cale(167, 76);
+			margin: 0 auto;
+			background:url(../img/submit_btn.png);
+			background-size:100% 100%;
+			border:0px;
+			outline: 0px;
+			display: block;
+		}
+		.btnb{
+			@include s_cale(170, 74);
+			margin: 0 auto;
+			margin-top: 0.6rem;
+			background:url(../img/change_btn.png);
+			background-size:100% 100%;
+			border:0px;
+			outline: 0px;
+			display: block;
+		}
+	}
+}
+.choujiangR{
+	display:none;
+	position:fixed;
+	z-index: 99;
+	left:0px;
+	top:0px;
+	height:100%;
+	width: 100%;
+	background:rgba(0,0,0,0.69);
+	.pmac{
+		background-image:url(../img/noPeople.png);
+		background-size:100% 100%;
+		@include s_cale(640, 745);
+		margin: 0 auto;
+		top: 50%;
+		left:0px;
+		right:0px;
+		position:relative;
+		margin-top: -745 / 2 / $cal * 1rem;
+		.close{
+			@include s_cale(91, 91);
+			right:0.5rem;
+			position:absolute;
+			top: -1.4rem;
+		}
+		.sharefriend{
+			@include s_cale(290, 89);
+			position:absolute;
+			bottom:1.4rem;
+			left:0px;
+			right: 0px;
+			margin: 0 auto;
+		}
+	}
+}
+
+.getPrice{
+	position:fixed;
+	z-index: 99;
+	left:0px;
+	top:0px;
+	height:100%;
+	width: 100%;
+	display: none;
+	background:rgba(0,0,0,0.69);
+	.pmac{
+		background-image:url(../img/getPrice.png);
+		background-size:100% 100%;
+		@include s_cale(640, 957);
+		margin: 0 auto;
+		top: 50%;
+		left:0px;
+		right:0px;
+		position:relative;
+		margin-top: -957 / 2 / $cal * 1rem;
+		.close{
+			@include s_cale(91, 91);
+			right:0.5rem;
+			position:absolute;
+			top: 1rem;
+		}
+		.cons{
+			position:absolute;
+			top: 8rem;
+			width: 100%;
+		}
+		.title{
+			color: #74550c;
+			font-weight: 600;
+			@include double_font(30);
+			text-align: center;
+		}
+		.bgs{
+			background-image:url(../img/bgms.png);
+			@include s_cale(460, 199);
+			margin: 0 auto;
+			margin-top: 0.5rem;
+			.fr{
+				color: #000000;
+				@include double_font(60);
+				width: 180 / $cal * 1rem;
+				div{
+					margin: 0 auto;
+					width: 68%;
+					margin-top: 0.35rem;
+				}
+			}
+			.fl{
+				.topx{
+					margin-top: 0.3rem;
+					text-align: center;
+					color: #fdffd8;
+					@include double_font(26);
+					span{
+						@include double_font(116);
+					}
+				}
+				.bottomx{
+					text-align: center;
+					color: #fdffd8;
+					margin-top:-0.2rem;
+					@include double_font(26);
+				}
+			}
+		}
+	}
+}
+
+.five_alert{
+	position:fixed;
+	z-index: 99;
+	left:0px;
+	top:0px;
+	height:100%;
+	width: 100%;
+	display: none;
+	background:url(../img/five_alert.png);
+	background-size: 100% 100%;
+}

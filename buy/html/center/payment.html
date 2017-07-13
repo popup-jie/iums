@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>付款</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/center.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+	</head>
+	<body>
+		<div class="payment">
+			<div class="topFiexdBtn">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>付款</div>
+			</div>
+			<div class="kong2"></div>
+			<div class="top">
+				<div class="topx">
+					消费总额
+				</div>
+				<div class="input">
+					<input type="tel" name="" placeholder="请输入消费总额">
+				</div>
+				<div class="rem">可向店员询问消 费总额</div>
+			</div>
+			<div class="ullist">
+				<div class="list flex">
+					<div class="icon">
+						<img src="../../img/wechat_pay_icon2.png" />
+					</div>
+					<div class="flex_item">
+						<div class="topt">微信支付</div>
+						<div class="fx">推荐安装微信5.0及以上版本的用户使用</div>
+					</div>
+					<div class="geticon">
+						<img src="../../img/getfalse_icon.png" />
+					</div>
+				</div>
+				<div class="list flex">
+					<div class="icon ap">
+						<img src="../../img/alipay_icon2.png" />
+					</div>
+					<div class="flex_item">
+						<div class="topt">支付宝支付</div>
+						<div class="fx">推荐有支付宝帐号的用户使用</div>
+					</div>
+					<div class="geticon">
+						<img src="../../img/gettrue_icon.png" />
+					</div>
+				</div>
+			</div>
+			<div class="submit"><a href="orderdetail.html">确认支付</a></div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+		$(".geticon").click(function(){
+			$(".ullist .geticon").find("img").attr("src","../../img/getfalse_icon.png");
+			$(this).find("img").attr("src","../../img/gettrue_icon.png");
+		})
+	})
+</script>

@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+	<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+	<meta content="telephone=no, address=no" name="format-detection">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta content="no-cache" http-equiv="pragma">
+	<meta content="0" http-equiv="expires">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<title>算一算，保额多少才幸福？</title>
+	<script type="text/javascript" src="js/data.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css">
+	<link type="text/css" rel="stylesheet" href="css/animate.min.css">
+	<link type="text/css" rel="stylesheet" href="css/reset.css">
+</head>
+	
+<body>
+	<div class="normalmusic"><img src="img/normalmusic.png" /></div>
+	<audio style="display:none; height: 0" id="bg-music" preload="auto" src="img/123.mp3" loop="loop" autoplay="autoplay"></audio>
+	<div class="swiper-container" style="width: 100%;height: 100%;overflow: hidden">
+		<div class="swiper-wrapper">
+			<section class="one swiper-slide">
+				<div class="ani cloud" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="img/one_cloud.png" /></div>
+				<div class="ani tree-one" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="img/one_tree.png" /></div>
+				<div class="ani title" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/one_title.png" /></div>
+				<div class="ani tree-two" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/one_tree2.png" /></div>
+				<div class="ani people" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"><img src="img/one_people.png" /></div>
+				<div class="ani cir" swiper-animate-effect="fadeInUp" swiper-animate-duration=".5s" swiper-animate-delay="0.3s"><img src="img/one_cir.png" /></div>
+				<div class="ani font" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/one_footerFont.png" /></div>
+				<div class="up"><img src="img/up_icon.png" /></div>
+			</section>
+			<section class="two swiper-slide">
+				<div class="ani cloud" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="img/one_cloud.png" /></div>
+				<div class="ani tree-one" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="img/one_tree.png" /></div>
+				<div class="ani tree-two" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/one_tree2.png" /></div>
+				<div class="ox">
+					<div class="ani title" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/two_title.png" /></div>
+					<div class="ani peox" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+						<div class="boy btna">
+							<img src="img/boy.png" />
+							<div class="get">
+								<img src="img/getTrue.png" />
+							</div>
+						</div>
+						<div class="girl btna">
+							<img src="img/girl.png" />
+							<div class="get">
+								<img src="img/getTrue.png" />
+							</div>
+						</div>
+					</div>
+					<a>
+						<div class="ani nextBtn" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.8s"><img src="img/nextbtn.png" /></div>
+					</a>
+				</div>
+				<div class="footer hide animated" style="position: absolute;bottom:0px">
+					<div class="footer_bg">
+						<img src="img/bg-cir.png" />
+						<div class="shan"><img src="img/shan.png" /></div>
+					</div>
+				</div>
+			</section>
+			<section class="three swiper-slide">
+				<div class="ani cloud" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="img/one_cloud.png" /></div>
+				<div class="ani tree-one" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="img/one_tree.png" /></div>
+				<div class="ani tree-two" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/one_tree2.png" /></div>
+				<div class="ox">
+					<div class="ani title" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/three_title.png" /></div>
+					<div class="ani cons" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+						<div class="titlefont" style="margin-bottom: 1.3rem">您过了</div>
+						<input type="tel" onkeyup="if(/\D/.test(this.value)){this.value='1';}" id="date" />
+						<div class="titlefont">个生日</div>
+					</div>
+					<a>
+					<div class="ani nextBtn" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.8s"><img src="img/nextbtn.png" /></div>
+					</a>
+				</div>
+				<div class="footer hide animated" style="position: absolute;bottom:0px">
+					<div class="footer_bg">
+						<img src="img/bg-cir.png" />
+						<div class="shan"><img src="img/shan.png" /></div>
+					</div>
+				</div>
+			</section>
+			<section class="four swiper-slide">
+				<div class="ani cloud" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="img/one_cloud.png"><img src="img/one_cloud.png" /></div>
+				<div class="ani tree-one" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="img/one_tree.png" /></div>
+				<div class="ani tree-two" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/one_tree2.png" /></div>
+				<div class="ox">
+					<div class="ani title" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/four_title.png" /></div>
+					<div class="ani peox" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+						<div class="danshen btna"><img src="img/danshen.png" /><div class="get"><img src="img/getTrue.png" /></div></div>
+						<div class="fuqi btna"><img src="img/fuqi.png" /><div class="get"><img src="img/getTrue.png" /></div></div>
+						<div class="dankou btna"><img src="img/dankou.png" /><div class="get"><img src="img/getTrue.png" /></div></div>
+						<div class="duokou btna"><img src="img/duokou.png" /><div class="get"><img src="img/getTrue.png" /></div></div>
+					</div>
+					<a>
+					<div class="ani nextBtn" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.8s"><img src="img/nextbtn.png" /></div>
+					</a>
+				</div>
+				<div class="footer hide animated" style="position: absolute;bottom:0px">
+					<div class="footer_bg">
+						<img src="img/bg-cir.png" />
+						<div class="shan"><img src="img/shan.png" /></div>
+					</div>
+				</div>
+			</section>
+			<section class="fivth swiper-slide">
+				<div class="ani cloud" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="img/one_cloud.png" /></div>
+				<div class="ani tree-one" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="img/one_tree.png" /></div>
+				<div class="ani tree-two" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/one_tree2.png" /></div>
+				<div class="ox">
+					<div class="ani title" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/fivth_title.png" /></div>
+					<div class="ani cons" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+						<div class="titlefont">每月家庭支出是</div>
+						<div class="input flex">
+							<input type="text" class="flex_item" id="pay" onkeyup="this.value=(this.value.match(/\d+(\.\d{0,4})?/)||[''])[0]" /><div>万元</div>
+						</div>
+						<div class="impa flex" style="margin-top: 0.3rem">
+							<div class="imgx" style="margin-left: 0.5rem;">
+								<img src="img/2017l.png" />
+								<p>抚养子女</p>
+							</div>
+							<div class="imgx" style="margin-right: 0;margin-left: 0.5rem">
+								<img src="img/2017a.png" />
+								<p>赡养父母</p>
+							</div>
+						</div>
+						<div class="impa flex" style="width: 5.3rem">
+							<div class="imgx" style="margin-right: 0.5rem">
+								<img src="img/2017q.png" />
+								<p>日常交际</p>
+							</div>
+							<div class="imgx" style="margin-right: 0.5rem">
+								<img src="img/2017r.png" />
+								<p>水电煤气</p>
+							</div>
+							<div class="imgx" style="margin-right: 0px">
+								<img src="img/2017w.png" />
+								<p>生活开支</p>
+							</div>
+						</div>
+					</div>
+					<a>
+						<div class="ani nextBtn" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.8s" style="margin-top: -0.2rem;"><img src="img/nextbtn.png" /></div>
+					</a>
+				</div>
+				<div class="footer hide animated" style="position: absolute;bottom:0px">
+					<div class="footer_bg">
+						<img src="img/bg-cir.png" />
+						<div class="shan"><img src="img/shan.png" /></div>
+					</div>
+				</div>
+			</section>
+			<section class="six swiper-slide">
+				<div class="ani cloud" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="img/one_cloud.png" /></div>
+				<div class="ani tree-one" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="img/one_tree.png" /></div>
+				<div class="ani tree-two" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/one_tree2.png" /></div>
+				<div class="ox">
+					<div class="ani title" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/six_title.png" /></div>
+					<div class="ani cons"  swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+						<div class="titlefont">家庭需要您照顾的年期至少</div>
+						<div class="programe">
+							<div class="mxd"></div>
+							<div class="btnx"></div>
+						</div>
+						<div class="font_tx" id="pay_year" style="margin-top: 0.2rem">
+							10年
+						</div>
+						<div class="imgx" style="margin-top: 0.2rem">
+							<img src="img/2017a.png" />
+							<p>赡养父母</p>
+						</div>
+						<input type="text" style="display: none;" value="10" id="year" />
+					</div>
+					<a>
+						<div class="ani nextBtn" style="margin-top: 0.5rem" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s"><img src="img/nextbtn.png" /></div>
+					</a>
+				</div>
+				<div class="footer hide animated" style="position: absolute;bottom:0px">
+					<div class="footer_bg">
+						<img src="img/bg-cir.png" />
+						<div class="shan"><img src="img/shan.png" /></div>
+					</div>
+				</div>
+			</section>
+			<section class="seven swiper-slide">
+				<div class="ani cloud"  swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="img/one_cloud.png" /></div>
+				<div class="ani tree-one" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="img/one_tree.png" /></div>
+				<div class="ani tree-two" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/one_tree2.png" /></div>
+				<div class="ox">
+					<div class="ani title" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/seven_title.png" /></div>
+					<div class="ani cons" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+						<div class="titlefont">请选择您觉得保守的投资效益年利率</div>
+						<div class="programe">
+							<div class="mxd"></div>
+							<div class="btnx"></div>
+						</div>
+						<div class="font_tx" id="lv-ued">
+							0.5%
+						</div>
+						<input type="text" style="display: none;" value="0.5" id="lv" />
+					</div>
+					<a>
+						<div class="ani nextBtn" style="margin-top: 0.5rem" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s"><img src="img/nextbtn.png" /></div>
+					</a>
+				</div>
+				<div class="footer hide animated" style="position: absolute;bottom:0px">
+					<div class="footer_bg">
+						<img src="img/bg-cir.png" />
+						<div class="shan"><img src="img/shan.png" /></div>
+					</div>
+				</div>
+			</section>
+			<section class="eight swiper-slide">
+				<div class="ani cloud" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="img/one_cloud.png" /></div>
+				<div class="ani tree-one" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="img/one_tree.png" /></div>
+				<div class="ani tree-two" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/one_tree2.png" /></div>
+				<div class="ox">
+					<div class="ani title" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/eight_title.png" /></div>
+					<div class="ani cons" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+						<div class="titlefont">您目前按揭及债务情况为</div>
+						<div class="input flex">
+							<input type="text" class="flex_item" id="daikuang" onkeyup="this.value=(this.value.match(/\d+(\.\d{0,4})?/)||[''])[0]" /><div>万元</div>
+						</div>
+						<div class="impa flex" style="margin-top: 0.3rem">
+							<div class="imgx">
+								<img src="img/2017b.png" />
+								<p>房贷</p>
+							</div>
+							<div class="imgx">
+								<img src="img/2017c.png" />
+								<p>车贷</p>
+							</div>
+							<div class="imgx">
+								<img src="img/2017d.png" />
+								<p>其他债务</p>
+							</div>
+						</div>
+					</div>
+					<a>
+						<div class="ani nextBtn" style="margin-top: 0.5rem" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s"><img src="img/nextbtn.png" /></div>
+					</a>
+				</div>
+				<div class="footer hide animated" style="position: absolute;bottom:0px">
+					<div class="footer_bg">
+						<img src="img/bg-cir.png" />
+						<div class="shan"><img src="img/shan.png" /></div>
+					</div>
+				</div>
+			</section>
+			<section class="night swiper-slide">
+				<div class="ani cloud" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="img/one_cloud.png" /></div>
+				<div class="ani tree-one" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="img/one_tree.png" /></div>
+				<div class="ani tree-two" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/one_tree2.png" /></div>
+				<div class="ox">
+					<div class="ani title" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/night_title.png" /></div>
+					<div class="ani cons" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+						<div class="titlefont">您的现有资产有</div>
+						<div class="input flex">
+							<input type="text" class="flex_item" id="nowmoney" onkeyup="this.value=(this.value.match(/\d+(\.\d{0,4})?/)||[''])[0]" /><div>万元</div>
+						</div>
+						<div class="impa flex">
+							<div class="imgx">
+								<img src="img/2017f.png" />
+								<p>现&nbsp;金</p>
+							</div>
+							<div class="imgx">
+								<img src="img/2017h.png" />
+								<p>存&nbsp;款</p>
+							</div>
+						</div>
+						<div class="impa flex">
+						<div class="imgx">
+								<img src="img/2017g.png" />
+								<p>股票、基金</p>
+							</div>
+							<div class="imgx">
+								<img src="img/2017e.png" />
+								<p>黄&nbsp;金</p>
+							</div>
+						</div>
+					</div>
+					<a>
+						<div class="ani nextBtn" style="margin-top: 0.5rem" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s"><img src="img/nextbtn.png" /></div>
+					</a>
+				</div>
+				<div class="footer hide animated" style="position: absolute;bottom:0px">
+					<div class="footer_bg">
+						<img src="img/bg-cir.png" />
+						<div class="shan"><img src="img/shan.png" /></div>
+					</div>
+				</div>
+			</section>
+			<section class="ten swiper-slide">
+				<div class="ani cloud" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="img/one_cloud.png" /></div>
+				<div class="ani tree-one" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="img/one_tree.png" /></div>
+				<div class="ani tree-two" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/one_tree2.png" /></div>
+				<div class="ox">
+					<div class="ani title" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/ten_title.png" /></div>
+					<div class="ani cons" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+						<div class="titlefont">您已经拥有的保障额度为</div>
+						<div class="input flex">
+							<input type="text" class="flex_item" id="buy" onkeyup="this.value=(this.value.match(/\d+(\.\d{0,4})?/)||[''])[0]" /><div>万元</div>
+						</div>
+						<div class="impa flex" style="margin-top: 0.3rem;">
+							<div class="imgx">
+								<img src="img/2017a.png" />
+								<p>养老保险</p>
+							</div>
+							<div class="imgx">
+								<img src="img/2017j.png" />
+								<p>商业保险</p>
+							</div>
+							<div class="imgx">
+								<img src="img/2017k.png" />
+								<p>医疗保险</p>
+							</div>
+						</div>
+					</div>
+					<a>
+					<div class="ani nextBtn" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.8s"><img src="img/nextbtn.png" /></div>
+					</a>
+				</div>
+				<div class="footer hide animated" style="position: absolute;bottom:0px">
+					<div class="footer_bg">
+						<img src="img/bg-cir.png" />
+						<div class="shan"><img src="img/shan.png" /></div>
+					</div>
+				</div>
+			</section>
+			<section class="eleven swiper-slide">
+				<div class="ani cloud" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="img/one_cloud2.png" /></div>
+				<div class="ani tree-one" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="img/one_tree.png" /></div>
+				<div class="ani tree-two" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/one_tree2.png" /></div>
+				<div class="comx">
+					<div class="title ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+						<img src="img/eleven_title.png" />
+						<div class="inputx">0</div>
+					</div>
+					<div class="eleven_p ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.8s"><img src="img/eleven_p.png" /></div>
+					<div class="eleven_t ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+						<div class="pt">这个保额缺口，就是您需要肩负的家庭责任</div>
+						<div class="flex">
+							<span class="icon"></span>
+							<span>您在的时候，家庭由您照顾！</span>
+						</div>
+						<div class="flex">
+							<span class="icon"></span>
+							<span>您不在的时候，家庭由您的人寿保险照顾，让我们和您一起来守护这个幸福的家！</span>
+						</div>
+					</div>
+					<div class="btns ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="1.2s">
+						<div class="btnfont"><img src="img/btn_font.png" /></div>
+						<div class="btn fl" id="oneBtn">
+							<a target="_blank">
+								<img src="img/btna.png" />
+							</a>
+						</div>
+						<div class="btn fr" id="twoBtn">
+							<a target="_blank">
+								<img src="img/btnb.png" />
+							</a>
+						</div>
+						<div class="clear"></div>
+						<div class="btnx">
+							<a href="https://elis-ecocdn.pingan.com.cn/lilith/static/downloads/index.html" target="_blank">
+								<img src="img/btnc.png" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer hide animated" style="position: absolute;bottom:0px">
+					<div class="footer_bg">
+						<img src="img/bg-cir.png" />
+						<div class="shan"><img src="img/shan.png" /></div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!-- <div class="footer hide animated">
+		<div class="footer_bg">
+			<img src="img/bg-cir.png" />
+			<div class="shan"><img src="img/shan.png" /></div>
+		</div>
+		
+	</div> -->
+
+</body>
+</html>
+<script type="text/javascript" src='js/zepto.min.js'></script>
+<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript" src="js/swiper.animate.min.js"></script>
+<script type="text/javascript" src='js/size.js'></script>
+
+<script type="text/javascript">
+	$(function(){
+		function GetQueryString(name) {
+		   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+		   var r = window.location.search.substr(1).match(reg);
+		   if (r!=null) return (r[2]); return null;
+		}
+		var _parentCode = GetQueryString("parentCode");
+		var _agentNo = GetQueryString("agentNo");
+		var Time = new Date().getTime();
+		// timestamp
+		var _productNo = GetQueryString("productNo");
+		///new Date()
+		///"https://salescdn.pa18.com/salesinfo/eLifeAssist/html/productDetail.html?agentNo="+_agentNo+"&productNo=1182&interFace=&isWechatAuth=N&prdSource=zeb&visitSwitch=on&temp=1489995209907&parentCode="+_parentCode+"&from=singlemessage&isappinstalled=1"
+		$("#oneBtn").find("a").attr("href","https://salescdn.pa18.com/salesinfo/eLifeAssist/html/productDetail.html?agentNo="+_agentNo+"&productNo=1182&interFace=&visitSwitch=off&tmp="+ Time + "&parentCode=" + _parentCode);
+		$("#twoBtn").find("a").attr("href","https://salescdn.pa18.com/salesinfo/eLifeAssist/html/productDetail.html?agentNo="+_agentNo+"&productNo=1216&interFace=&visitSwitch=off&tmp="+ Time + "&parentCode=" + _parentCode);
+		//https://salescdn.pa18.com/salesinfo/eLifeAssist/html/productDetail.html?agentNo="+_agentNo+"&productNo=1216&interFace=&isWechatAuth=Y&prdSource=zeb&visitSwitch=on&temp=1489995209907&parentCode="+_parentCode+"&from=singlemessage&isappinstalled=1&openID=oKy5DwH0pO8UnmZd-mwjzXl-Yr5g"
+
+	})
+</script>
+<script type="text/javascript" src='js/main.js'></script>

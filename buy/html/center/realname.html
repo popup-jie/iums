@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>实名认证</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/center.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+	</head>
+	<body>
+		<div class="realname">
+			<div class="topFiexdBtn">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>实名认证</div>
+			</div>
+			<div class="kong2"></div>
+			<ul class="lists">
+				<li class="flex">
+					<div class="">
+						真实姓名
+					</div>
+					<div class="flex_item">
+						<input type="text" name="" placeholder="名字">
+					</div>
+				</li>
+				<li class="flex">
+					<div class="">
+						身份证号码
+					</div>
+					<div class="flex_item">
+						<input type="text" name="" placeholder="455414554145541541" maxlength="18">
+					</div>
+				</li>
+				<li style='border-bottom: 0px'>身份证正反面上传</li>
+				<li class="clear" style='border-bottom: 0px'>
+					<div class="photo">
+						<img src="../../img/IDcardF.png" onclick="$(this).next().click()"/>
+						<input type="file" style="display:none;" id="IDcardF" />
+					</div>
+					<div class="photo">
+						<img src="../../img/IDcardZ.png" onclick="$(this).next().click()"/>
+						<input type="file" style="display:none;" id="IDcardZ"/>
+					</div>
+				</li>
+			</ul>
+			<div class='kong'></div>
+			<div class='f'>
+				<a href="user.html">确定提交</a>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+	})
+</script>

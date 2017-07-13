@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<title>我的评价</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../../css/dropload.min.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+		<script type="text/javascript" src="../../js/dropload.min.js"></script>
+	</head>
+	<body>
+		<div class='mineC'>
+			<div class="topFiexdBtn">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>我的评价</div>
+			</div>
+			<div class="kong2"></div>
+			<ul>
+				<li>
+					<div class="tops flex">
+						<div class="imgs"><img src="../../img/myCode_headerimg.png" /></div>
+						<div class="flex_item">昵称昵称昵称</div>
+						<div class="rightV">好评</div>
+					</div>
+					<div class="Ps">
+						评价内容评价内容评价内容评价内容评价内容评价
+内容评价内容评价内容评价内容
+					</div>
+					<div class="flex more">
+						<div class="time">2017-09-09 12:09</div>
+						<div class="flex_item tits">商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题</div>
+					</div>
+				</li>
+				<li>
+					<div class="tops flex">
+						<div class="imgs"><img src="../../img/myCode_headerimg.png" /></div>
+						<div class="flex_item">昵称昵称昵称</div>
+						<div class="rightV">好评</div>
+					</div>
+					<div class="Ps">
+						评价内容评价内容评价内容评价内容评价内容评价
+内容评价内容评价内容评价内容
+					</div>
+					<div class="flex more">
+						<div class="time">2017-09-09 12:09</div>
+						<div class="flex_item tits">商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题</div>
+					</div>
+				</li>
+				<li>
+					<div class="tops flex">
+						<div class="imgs"><img src="../../img/myCode_headerimg.png" /></div>
+						<div class="flex_item">昵称昵称昵称</div>
+						<div class="rightV">好评</div>
+					</div>
+					<div class="Ps">
+						评价内容评价内容评价内容评价内容评价内容评价
+内容评价内容评价内容评价内容
+					</div>
+					<div class="flex more">
+						<div class="time">2017-09-09 12:09</div>
+						<div class="flex_item tits">商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题</div>
+					</div>
+				</li>
+				<li>
+					<div class="tops flex">
+						<div class="imgs"><img src="../../img/myCode_headerimg.png" /></div>
+						<div class="flex_item">昵称昵称昵称</div>
+						<div class="rightV">好评</div>
+					</div>
+					<div class="Ps">
+						评价内容评价内容评价内容评价内容评价内容评价
+内容评价内容评价内容评价内容
+					</div>
+					<div class="flex more">
+						<div class="time">2017-09-09 12:09</div>
+						<div class="flex_item tits">商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题</div>
+					</div>
+				</li>
+				<li>
+					<div class="tops flex">
+						<div class="imgs"><img src="../../img/myCode_headerimg.png" /></div>
+						<div class="flex_item">昵称昵称昵称</div>
+						<div class="rightV">好评</div>
+					</div>
+					<div class="Ps">
+						评价内容评价内容评价内容评价内容评价内容评价
+内容评价内容评价内容评价内容
+					</div>
+					<div class="flex more">
+						<div class="time">2017-09-09 12:09</div>
+						<div class="flex_item tits">商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+	$(function(){
+		$('.returnBtn').click(function(){
+			history.back();
+		})
+		$('ul').dropload({
+	        scrollArea : window,
+	        loadDownFn : function(me){
+	        	setTimeout(function(){
+                    me.resetload();
+                },1000);
+	            // $.ajax({
+	            //     type: 'GET',
+	            //     url: 'json/more.json',
+	            //     dataType: 'json',
+	            //     success: function(data){
+	            //         var result = '';
+	            //         for(var i = 0; i < data.lists.length; i++){
+	            //             result +=   'hello';
+	            //         }
+	            //         // 为了测试，延迟1秒加载
+	            //         setTimeout(function(){
+	            //             $('#lmess').append(result);
+	            //             me.resetload();
+	            //         },1000);
+	            //     },
+	            //     error: function(xhr, type){
+	            //         alert('Ajax error!');
+	            //         me.resetload();
+	            //     }
+	            // });
+	        }
+	    });
+	})
+	</script>
+</html>

@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<title>订单详情</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/center.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+	</head>
+	<body>
+		<div class="order comfirm">
+			<div class="topFiexdBtn" style="background: #f27920">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>等待收货</div>
+			</div>
+			<div class="kong2"></div>
+			<div class='head'>
+				<div class='fl txt'>
+					订单在途中
+					
+				</div>
+				<div class='fl img'>
+					<img src='../../img/ordertuzhong.png'/>
+				</div>
+				<div class='clear'></div>
+			</div>
+			<div class="topg">
+				<a class="flex" href="../getGoods.html">
+					<div class="flex_item">
+						<div>上海市浦东新区人民路圆觉小区18幢2单元1001</div>
+						<div><span>张杰</span><span>13678900987</span></div>
+					</div>
+					<div class="right_icon"><img src="../../img/right_icon2.png" /></div>
+				</a>
+			</div>
+			<div class="item_info">
+				<div class="item">
+					<a class="flex" href="../store/projectdetai.html">
+						<div class="photo"><img src="../../img/itema.png" /></div>
+						<div class="flex_item">
+							<div class="t">商品名字商品名字商品名字商品名字商品名字</div>
+							<div class="tr">颜色分类：深蓝色，尺码：XL</div>
+							<div class="money">
+								<div class="fl">¥<span>5,199.00</span></div>
+								<div class="fr">X<span>1</span></div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="choose">
+				<div class="title">选择支付方式</div>
+				<ul>
+					<li class="flex">
+						<div class="pysn">实付款</div>
+						<div class="flex_item moneys">¥<span>119.09</span></div>
+					</li>
+					<li class="flex">
+						<div class="pysn">积分抵扣</div>
+						<div class="flex_item moneys">-¥<span>10.00</span></div>
+					</li>
+					<li class="flex">
+						<div class="pysn">支付方式</div>
+						<div class="flex_item txtsf">微信支付</div>
+					</li>
+					<li class="flex">
+						<div class="pysn">留言</div>
+						<div class="flex_item txtsf">twwsseeaaqss</div>
+					</li>
+				</ul>
+			</div>
+			<ul class="infosx">
+				<li>订单编号：<span>292625242343223</span></li>
+				<li>交易编号：<span>292625242343223</span></li>
+				<li>创建时间：<span>2016-08-09 11:09:09</span></li>
+				<li>交易时间：<span>2016-08-09 11:09:09</span></li>
+			</ul>
+			<div class="kong"></div>
+			<div class="f flex">
+				<div class="flex_item" style="background: #f27920;text-align: center;color: #fff;"><a href="">取消订单</a></div>
+				<div class="flex_item" style="background: #ff0000;text-align: center;color: #fff;"><a href="">确认收货</a></div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+		$(".order .integral .btn .cird").click(function(){
+			if($(this).hasClass("on")){
+				$(this).removeClass("on");
+				$(this).animate({'left':"0%"})
+				$(this).css({'background':'#fff'})
+			}else{
+				$(this).addClass("on");
+				$(this).animate({'left':"40%"})
+				$(this).css({'background':'#f27920'})
+			}
+		})
+		$(".order .choose .right_icon").click(function(){
+			if($(this).hasClass("yus")){
+				if($(this).hasClass("on")){
+					$(this).removeClass("on");
+					$(this).find("img").attr("src","../../img/getfalse_icon.png");
+				}else{
+					$(this).addClass("on");
+					$(this).find("img").attr("src","../../img/gettrue_icon.png");
+				}
+				return;
+			}
+			$(".order .choose .right_icon.po").find("img").attr("src","../../img/getfalse_icon.png");
+			$(this).find("img").attr("src","../../img/gettrue_icon.png");
+		})
+	})
+</script>

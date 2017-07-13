@@ -1,0 +1,199 @@
+<html>
+	<head>
+		<title>申请开店</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css">
+		<link href="../../css/mui.picker.css"  type="text/css"  rel="stylesheet" />
+ 		<link href="../../css/mui.poppicker.css" type="text/css"  rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/LArea.css">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/store.css">
+		<link rel="stylesheet" type="text/css" href="../../css/weui.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+
+		<script src="../../js/LAreaData1.js"></script>
+		<script src="../../js/LAreaData2.js"></script>
+	    <script src="../../js/LArea.js"></script>
+	    <script type="text/javascript" src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/mui.picker.js"></script>
+		<script type="text/javascript" src="../../js/mui.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/main.js"></script>
+	</head>
+	<body>
+		<div class="storeinfo">
+			<div class="topFiexdBtn">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>申请开店</div>
+			</div>
+			<div class="kong2"></div>
+			<ul>
+				<li class="flex">
+					<div class="names">商家名字</div>
+					<div class="txt flex_item">
+						<input type="text" placeholder="阿东服饰" />
+					</div>
+					<div class="right_icon">
+						<img src="../../img/right_icon2.png" />
+					</div>
+				</li>
+				<li class="flex">
+					<div class="names">商家地址</div>
+					<div class="txt flex_item">
+						<input type="text" placeholder="上海，浦东" readonly="readonly" id="area"/>
+						<input type="" name="" style="display: none" id="value1">
+					</div>
+					<div class="right_icon">
+						<img src="../../img/right_icon2.png" />
+					</div>
+				</li>
+				<li class="flex">
+					<div class="names ">商家电话</div>
+					<div class="txt flex_item">
+						<input type="tel" placeholder="13787679890" />
+					</div>
+					<div class="right_icon">
+						<img src="../../img/right_icon2.png" />
+					</div>
+				</li>
+				<li class="flex" id="userTime">
+					<div class="names">营业时间</div>
+					<div class="txt flex_item">
+						<input type="text" readonly="readonly"/>
+					</div>
+					<div class="right_icon">
+						<img src="../../img/right_icon2.png" />
+					</div>
+
+				</li>
+				<li class="flex bs" id="types">
+					<div class="names">营业类别</div>
+					<div class="txt flex_item">
+						<input type="text" readonly="readonly"/>
+					</div>
+					<div class="right_icon">
+						<img src="../../img/right_icon2.png"/>
+					</div>
+				</li>
+			</ul>
+			<ul style="margin-top:6px;border-top:1px solid #eee;border-bottom: 1px solid #eee">
+				<li class="flex" id="logo">
+					<div class="names">商家LOGO</div>
+					<div class="txt flex_item" onclick="$(this).next().next().click()">
+						<input type="text" readonly="readonly" />
+					</div>
+					<div class="right_icon" onclick="$(this).next().click()">
+						<img src="../../img/right_icon2.png" />
+					</div>
+					<input type="file" name="" style="display: none">
+				</li>
+				<li class="flex"  id="zhizhao">
+					<div class="names">营业执照</div>
+					<div class="txt flex_item" onclick="$(this).next().next().click()">
+						<input type="text" placeholder="选填" readonly="readonly" />
+					</div>
+					<div class="right_icon" onclick="$(this).next().click()">
+						<img src="../../img/right_icon2.png" />
+					</div>
+					<input type="file" name="" style="display: none">
+				</li>
+				<li style='border-bottom: 0px;line-height: 1.70667rem;'>商家照片</li>
+				<li class="clear">
+					<div class="photo">
+						<img src="../../img/stroremanagea.png" class="bgphoto" />
+						<input type="file" style="display:none;" id="IDcardF" />
+						<div class="close"><img src="../../img/closed_icon.png"></div>
+					</div>
+					<div class="photo">
+						<img src="../../img/stroremanagea.png" class="bgphoto"/>
+						<input type="file" style="display:none;" id="IDcardZ"/>
+						<div class="close"><img src="../../img/closed_icon.png"></div>
+					</div>
+					<div class="photo">
+						<img src="../../img/addphoto.png" onclick="$(this).next().click()"/>
+						<input type="file" style="display:none;" id="IDcardZ"/>
+					</div>
+				</li>
+				<li style='border-bottom: 0px;line-height: 1.70667rem;'>身份证正反面上传</li>
+				<li class="clear">
+					<div class="photo">
+						<img src="../../img/IDcardF.png" onclick="$(this).next().click()"/>
+						<input type="file" style="display:none;" id="IDcardF" />
+					</div>
+					<div class="photo">
+						<img src="../../img/IDcardZ.png" onclick="$(this).next().click()"/>
+						<input type="file" style="display:none;" id="IDcardZ"/>
+					</div>
+				</li>
+				<li class="flex" id="zhekou">
+					<div class="names">选择给平台的折扣</div>
+					<div class="txt flex_item">
+						<input type="text" placeholder="选择" readonly="readonly" />
+					</div>
+					<div class="right_icon">
+						<img src="../../img/right_icon2.png" />
+					</div>
+				</li>
+			</ul>
+			<div class="pos">
+				<img src="../../img/gettrue_icon.png" />我已阅读并同意<span>《买啦官方协议》</span>
+			</div>
+			<div class="btn">
+				<a href="../center/examine.html">确定提交</a>
+			</div>
+		</div>
+		<div class="weui-gallery">
+	        <span class="weui-gallery__img" style="background-image: url(../../img/stroremanagea.png);"></span>
+	        <div class="weui-gallery__opr">
+	            <a href="javascript:" class="weui-gallery__del">
+	                
+	            </a>
+	        </div>
+	    </div>
+	</body>
+</html>
+<script type="text/javascript">
+Zepto(function(){
+	$(".returnBtn").click(function(){
+		history.back()
+	})
+	var area1 = new LArea();
+    area1.init({
+        'trigger': '#area', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+        'valueTo': '#value1', //选择完毕后id属性输出到该位置
+        'keys': {
+            id: 'id',
+            name: 'name'
+        }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+        'type': 1, //数据源类型
+        'data': LAreaData //数据源
+    });
+    area1.value=[1,13,3];//控制初始位置，注意：该方法并不会影响到input的value
+
+    Zepto(".storeinfo ul li .photo .bgphoto").click(function(){
+    	Zepto(".weui-gallery").show();
+    })
+    Zepto(".weui-gallery").click(function(){
+    	Zepto(this).hide();
+    })
+    Zepto(".bs").click(function(){
+    	Zepto(this).next().show();
+    	var s = this;
+    	Zepto(this).next().find("div").click(function(){
+    		Zepto(s).find("input").val(Zepto(this).text());
+    		Zepto(s).next().hide();
+    	})
+    })
+    Zepto(".close").click(function(){
+    	Zepto(this).parent().remove();
+    })
+});
+</script>

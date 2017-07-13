@@ -1,0 +1,209 @@
+<html>
+	<head>
+		<title>登录</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/center.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+	</head>
+	<body style="background: #fff">
+		<div class="topFiexdBtn">
+			<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+			<div>登录</div>
+		</div>
+		<div class="kong2"></div>
+		<!-- 登录 -->
+		<div class="login" id="login">
+			<div class="kuang">
+				<div class="username flex">
+					<div class="icon"><img src="../../img/telphone_icon.png" /></div>
+					<div class="addnum">+86</div>
+					<div class="flex_item">
+						<input type="tel" placeholder="请输入手机号" id="telphone"/>
+					</div>
+					<div class="close"><img src="../../img/close_icon.png" /></div>
+				</div>
+				<div class="username flex userpass">
+					<div class="icon"><img src="../../img/password_icon.png" /></div>
+					<div class="flex_item">
+						<input type="text" placeholder="请输入6~16位字母/数字" />
+					</div>
+				</div>
+			</div>
+			<div class="forgetPass">
+				<a>忘记密码？</a>
+			</div>
+			<div class="btn" id="red_btn">注册</div>
+			<div class="btn" id="login_btn">登录买啦</div>
+		</div>
+		<!-- 登录end -->
+		<!-- 注册第一步 -->
+		<div class="login reg" style="display: none" id="regSteps">
+			<div class="kuang">
+				<div class="username flex">
+					<div class="icon"><img src="../../img/telphone_icon.png" /></div>
+					<div class="addnum">+86</div>
+					<div class="flex_item">
+						<input type="tel" placeholder="请输入手机号" />
+					</div>
+					<div class="getCode">获取验证码</div>
+				</div>
+				<div class="username flex userpass code">
+					<div class="icon"><img src="../../img/code.png" /></div>
+					<div class="flex_item">
+						<input type="tel" placeholder="请输入6位验证码" />
+					</div>
+				</div>
+			</div>
+			<div class="getT">
+				<img src="../../img/gettrue_icon.png" />我已阅读并同意<span>《买啦用户协议》</span>
+			</div>
+			<div class="btn" id="red_next_btn">下一步</div>			
+		</div>
+		<!-- 注册第一步end -->
+		<!-- 注册完成 -->
+		<div class="login reg" style="display: none" id="regend">
+			<div class="kuang">
+				<div class="username flex userpass" style="border-top:0px">
+					<div class="icon"><img src="../../img/password_icon.png" /></div>
+					<div class="addnum">*</div>
+					<div class="flex_item">
+						<input type="text" placeholder="请输入6~16位字母/数字" />
+					</div>
+				</div>
+				<div class="username flex userpass">
+					<div class="icon"><img src="../../img/password_icon.png" /></div>
+					<div class="addnum">*</div>
+					<div class="flex_item">
+						<input type="text" placeholder="请再次输入6~16位字母/数字" />
+					</div>
+				</div>
+				<div class="username flex userpass code2">
+					<div class="icon"><img src="../../img/yaoqingcode.png" /></div>
+					<div class="addnum"> </div>
+					<div class="flex_item">
+						<input type="text" placeholder="若有邀请码，请输入您的邀请码" />
+					</div>
+				</div>
+			</div>
+			<div class="btn" id="submit">完成</div>			
+		</div>
+		<!-- 注册完成end -->
+		<!-- 找回密码第一步 -->
+		<div class="login reg" style="display: none" id="findPassF">
+			<div class="kuang">
+				<div class="username flex">
+					<div class="icon"><img src="../../img/telphone_icon.png" /></div>
+					<div class="addnum">+86</div>
+					<div class="flex_item">
+						<input type="tel" placeholder="请输入手机号" />
+					</div>
+					<div class="getCode">获取验证码</div>
+				</div>
+				<div class="username flex userpass code">
+					<div class="icon"><img src="../../img/code.png" /></div>
+					<div class="flex_item">
+						<input type="tel" placeholder="请输入6位验证码" />
+					</div>
+				</div>
+			</div>
+			<div class="btn">验证</div>			
+		</div>
+		<!-- 找回密码第一步end -->
+		<!-- 找回密码完成 -->
+		<div class="login reg" style="display: none" id="submitFind">
+			<div class="kuang">
+				<div class="username flex userpass" style="border-top:0px">
+					<div class="icon"><img src="../../img/password_icon.png" /></div>
+					<div class="addnum">*</div>
+					<div class="flex_item">
+						<input type="text" placeholder="请输入6~16位字母/数字的新密码" />
+					</div>
+				</div>
+				<div class="username flex userpass">
+					<div class="icon"><img src="../../img/password_icon.png" /></div>
+					<div class="addnum">*</div>
+					<div class="flex_item">
+						<input type="text" placeholder="请再次确认新密码" />
+					</div>
+				</div>
+			</div>
+			<div class="btn">确认提交</div>			
+		</div>
+		<!-- 找回密码完成end -->
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+		//点击忘记密码按钮
+		$(".forgetPass").click(function(){
+			$("#login").hide();
+			$("#findPassF").show();
+			$(".topFiexdBtn").text("忘记密码");
+			$("title").text("忘记密码");
+		})
+		//点击忘记密码 验证按钮
+		$("#findPassF .btn").click(function(){
+			$("#findPassF").hide();
+			$("#submitFind").show();
+		})
+		//点击注册按钮
+		$("#red_btn").click(function(){
+			$("#login").hide();
+			$("#regSteps").show();
+			$(".topFiexdBtn").text("注册");
+			$("title").text("注册");
+		})
+		//点击注册下一步
+		$("#regSteps .btn").click(function(){
+			$("#regSteps").hide();
+			$("#regend").show();
+		})
+		//登录
+		$("#login_btn").click(function(){
+		})
+		//注册
+		$("#regend .btn").click(function(){
+		})
+		//手机验证提交
+		$("#submitFind .btn").click(function(){
+		})
+
+		//点击获取验证码
+		$(".getCode").click(function(){
+			var d = 59;
+			var _self = this;
+			$(_self).text(d+"秒后重新获取");
+			setTimeout(function(){
+				d--
+				if(d <=0){
+					$(_self).text("获取验证码");
+				}else{
+					$(_self).text(d+"秒后重新获取");
+					setTimeout(arguments.callee,1000)
+				}
+			},1000)
+			$(this).text()
+		})
+		document.onkeyup= function(){
+			$(".login .kuang .close").css({'opacity':1})
+		}
+		$(".login .kuang .close").click(function(){
+			$("#telphone").val("");
+			$(this).css({'opacity':0})
+		})
+		
+	})
+</script>

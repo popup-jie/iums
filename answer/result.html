@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"> -->
+	<meta name="viewport" content="target-densitydpi=286, width=640, user-scalable=no">
+	<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+	<meta content="telephone=no, address=no" name="format-detection">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta content="no-cache" http-equiv="pragma">
+	<meta content="0" http-equiv="expires">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<title>测试结果</title>
+
+	<link type="text/css" rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<script type="text/javascript" src="js/size.js"></script>
+</head>
+	
+<body>
+	<section class="result">
+		<div class="topFont flex">
+			<div class="fonta"><img src="img/resultFa.png" /></div>
+			<div class="score">30%</div>
+			<div class="fontb"><img src="img/resultFb.png" /></div>
+		</div>
+		<div class="btn">
+			<div class="share_btn"><img src="img/share_btn.png" /></div>
+			<div class="choujiang"><img src="img/choujiang.png" /></div>
+			<div class="try_again"><img src="img/try_again.png" /></div>
+		</div>
+	</section>
+
+	<section class="choujiangR">
+		<div class="pmac">
+			<div class="close"><img src="img/closeBtn.png" /></div>
+			<div class="sharefriend"><img src="img/sharefriend.png" /></div>
+		</div>
+	</section>
+
+	<section class="getPrice">
+		<div class="pmac">
+			<div class="close"><img src="img/closeBtn.png" /></div>
+			<div class="cons">
+				<div class="title">恭喜你获得了：<span>XXXX</span></div>
+				<div class="bgs flex clear">
+					<div class="fl flex_item">
+						<div class="topx"><span>50</span>元东券</div>
+						<div class="bottomx">（单笔满299可用）</div>
+					</div>
+					<div class="fr">
+						<div><a>点击领取</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="five_alert">
+		
+	</section>
+
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		function getCookie(name) { 
+	    	var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+		    if(arr=document.cookie.match(reg)){
+		        return unescape(arr[2]); 
+		    }
+		    else{
+		        return null; 
+		    }
+		} 
+		function delCookie(name) { 
+		    var exp = new Date(); 
+		    exp.setTime(exp.getTime() - 1); 
+		    var cval=getCookie(name); 
+		    if(cval!=null) 
+		        document.cookie= name + "="+cval+";expires="+exp.toGMTString(); 
+		} 
+		function getQueryString(name) { 
+		    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+		    var r = window.location.search.substr(1).match(reg); 
+		    if (r != null) return unescape(r[2]); return null; 
+		}
+		function getQueryString(name) { 
+		    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+		    var r = window.location.search.substr(1).match(reg); 
+		    if (r != null) return unescape(r[2]); return null; 
+		}
+		var xpm = getQueryString("pageStatus") || 'a';
+		var score = getQueryString("score") || '30';
+
+		$('.result').css({'background':'url(img/result'+xpm+'.jpg) center top no-repeat'});
+		$(".score").text(score + "%");
+
+		var prize_code = 0;
+
+		$(".choujiang").click(function(){
+			// $.getJSON("http://115.28.147.94:8081/external/prize/selectPrize.do?activity_code=selectYourCounty&func=callback",
+		 //    	function(json){
+		 //        	if(json.error_code == 0){
+		 //        		if(json.prize_code == 0){
+		 //        			$(".choujiangR").show();
+		 //        		}
+		 //        		else{
+		 //        			$(".getPrice").show();
+		 //        			prize_code = json.prize_code;
+		 //        			$(".getPrice .title span").text(json.message);
+		 //        			$(".getPrice .fr a").attr('href','submit.html?prize_code=' + prize_code);
+		 //        			$(".getPrice .fr").click(function(){
+			// 					window.location.href = 'submit.html?prize_code=' + prize_code;
+			// 				})
+
+		 //        		}
+		 //        	}
+		 //    	}
+		 //    );
+		 	
+		 	if(getCookie('Getprice')){
+		 		alert('你已经抽过奖了哦');
+		 		return;
+		 	}
+		 	
+			if(Math.abs(Math.round(Math.random() * 1)) == 0){
+			 	$(".getPrice").show();
+			}else{
+				$(".choujiangR").show();
+			}
+
+
+
+		})
+
+		
+
+		$(".choujiangR .pmac .close").click(function(){
+			$('.choujiangR').hide();
+		})
+		$(".getPrice .pmac .close").click(function(){
+			$('.getPrice').hide();
+		})
+		$('.try_again').click(function(){
+			window.location.href = 'an.html';
+		})
+		$('.share_btn').click(function(){
+			$('.five_alert').show();
+		})
+		$(".five_alert").click(function(){
+			$('.five_alert').hide();	
+		})
+	})
+
+
+</script>

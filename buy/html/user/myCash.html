@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<title>提现账户</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/base.css">
+		<script type="text/javascript" src="../../js/size.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+	</head>
+	<body>
+		<div class='myCash'>
+			<div class="topFiexdBtn">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>提现账户</div>
+			</div>
+			<div class="kong2"></div>
+			<ul class="lists">
+				<li class="photobga flex">
+					<div class="icon">
+						<img src="../../img/alipay_icon.png" />
+					</div>
+					<div class="flex_item">
+						<div class="_tits">支付宝账户</div>
+						<div class="_tit_name">支付宝支付</div>
+						<div class="_num">wmr3535***</div>
+					</div>
+					<div class="names">
+						张佳
+					</div>
+				</li>
+				<li class="photobgb flex">
+					<div class="icon">
+						<img src="../../img/wechat_pay_icon.png" />
+					</div>
+					<div class="flex_item">
+						<div class="_tits">微信账户</div>
+						<div class="_tit_name">微信支付</div>
+						<div class="_num">wmr3535***</div>
+					</div>
+					<div class="names">
+						张佳
+					</div>
+				</li>
+				<li class="photobgc flex">
+					<div class="icon">
+						<img src="../../img/bank_card.png" />
+					</div>
+					<div class="flex_item">
+						<div class="_tits">工商银行</div>
+						<div class="_tit_name">储蓄卡</div>
+						<div class="_num">**** **** **** 8987</div>
+					</div>
+					<div class="names">
+						张佳
+					</div>
+				</li>
+			</ul>
+			<div class='kong'></div>
+			<div class='f'>
+				<a href='myCashSubmit.html'>添加账户</a>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+		$(".lists li").click(function(){
+			window.location.href = "getmoney.html"
+		})
+	})
+</script>

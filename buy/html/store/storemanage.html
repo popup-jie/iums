@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<title>店铺管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/store.css">
+		<link rel="stylesheet" type="text/css" href="../../css/weui.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+	</head>
+	<body>
+		<div class="store_manage">
+			<div class="topFiexdBtn">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>店铺管理</div>
+			</div>
+			<div class="kong2"></div>
+			<div class="top_bg flex">
+				<div class="header_img_bg">
+					<div class="header_img">
+						<img src="../../img/head_top_icon.png" />
+					</div>
+				</div>
+				<div class="text flex_item" style="margin-top:0.36rem;">
+					<div class="til">商家名字</div>
+					<div class="tex">上海 浦东新区</div>
+				</div>
+				<div class="right">
+					<a href='storeinfo.html'>商家管理<img src="../../img/right_icon.png" /></a>
+				</div>
+			</div>
+			<ul class="imgs">
+				<li>
+					<div class="photo photobg"><img src="../../img/stroremanagea.png"/></div>
+					<div class="close"><img src="../../img/closed_icon.png"></div>
+				</li>
+				<li>
+					<div class="photo photobg"><img src="../../img/stroremanagea.png"/></div>
+					<div class="close"><img src="../../img/closed_icon.png"></div>
+				</li>
+				<li>
+					<div class="photo">
+						<img src="../../img/addphoto.png" onclick="$(this).next().click()"/>
+						<input type="file" style="display:none;" id="fileElem" />
+					</div>
+				</li>
+			</ul>
+			<ul class="list">
+				<li>
+					<a class="flex" href="managegoods.html">
+						<div class="project"><img src="../../img/project_icon.png" /></div>
+						<div class="flex_item">管理商品</div>
+						<div class="right_icon"><img src="../../img/right_icon2.png" /></div>
+					</a>
+				</li>
+				<!-- <li>
+					<a href="" class="flex" >
+						<div class="chat"><img src="../../img/chat_icon.png" /></div>
+						<div class="flex_item">商品评价</div>
+						<div class="right_icon"><img src="../../img/right_icon2.png" /></div>
+					</a>
+				</li> -->
+			</ul>
+			<div class='kong'></div>
+			<div class='f' style="background: #f27920">
+				<a href='releasegoods.html'>发布商品</a>
+			</div>
+		</div>
+		<div class="weui-gallery">
+	        <span class="weui-gallery__img" style="background-image: url(../../img/stroremanagea.png);"></span>
+	        <div class="weui-gallery__opr">
+	            <a href="javascript:" class="weui-gallery__del">
+	                
+	            </a>
+	        </div>
+	    </div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+		$(".close").click(function(){
+			$(this).parent().remove();
+		})
+		$("ul.imgs .photobg").click(function(){
+	    	$(".weui-gallery").show();
+	    })
+	    $(".weui-gallery").click(function(){
+	    	$(this).hide();
+	    })
+	})
+</script>

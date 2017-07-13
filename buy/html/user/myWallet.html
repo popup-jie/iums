@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<title>我的钱包</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/base.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+	</head>
+	<body>
+		<div class="myWallet">
+			<div class="topFiexdBtn">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>我的钱包</div>
+			</div>
+			<div class="kong2"></div>
+			<div class="topbg flex">
+				<div class="flex_item bo">
+					<div class="ti">我的余额（元）</div>
+					<div>100.00</div>
+				</div>
+				<div class="flex_item">
+					<div class="ti">我的积分（个）</div>
+					<div>10000</div>
+				</div>
+			</div>
+			<div class="steps">
+				<ul class="list flex">
+					<li class="on step">
+						<div class="top_b">
+							<div class="top_b1">
+								1
+							</div>
+						</div>
+					</li>
+					<li class="split"></li>
+					<li class="step">
+						<div class="top_b">
+							<div class="top_b1">
+								2
+							</div>
+						</div>
+					</li>
+					<li class="split"></li>
+					<li class="step">
+						<div class="top_b">
+							<div class="top_b1">
+								3
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="flex">
+					<li class="flex_item">
+						<div class="ti">发起提现</div>
+						<div class="times">02-09 12:09</div>
+					</li>
+					<li class="flex_item">
+						<div class="ti">提现中</div>
+						<div class="times">02-09 12:09</div>
+					</li>
+					<li class="flex_item">
+						<div class="ti">提现成功</div>
+						<div class="times">02-09 12:09</div>
+					</li>
+				</ul>
+			</div>
+			<ul class="control_list">
+				<li>
+					<a class="flex" href="myCash.html">
+						<div class="bank">
+							<img src="../../img/bank_card2.png" />
+						</div>
+						<div class="flex_item">
+							我的提现账户
+						</div>
+						<div class="right_icon">
+							<img src="../../img/right_icon2.png" />
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="flex" href="getmoney.html">
+						<div class="getmoney">
+							<img src="../../img/getmoney_icon.png" />
+						</div>
+						<div class="flex_item">
+							提现
+						</div>
+						<div class="right_icon">
+							<img src="../../img/right_icon2.png" />
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="flex" href="../dealRecord.html">
+						<div class="mywalletRecord">
+							<img src="../../img/mywalletRecord_icon.jpg" />
+						</div>
+						<div class="flex_item">
+							我的提现记录
+						</div>
+						<div class="right_icon">
+							<img src="../../img/right_icon2.png" />
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+	})
+</script>

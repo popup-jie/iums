@@ -1,0 +1,878 @@
+@import 'mixin.scss';
+
+//商品管理
+.store_manage{
+	.top_bg{
+		padding-top:30 / 75 * 1rem;
+		@include s_cale(100%,176,0);
+		background-image:url(../img/shopmanagetop_bg.jpg);
+		background-size:100% 100%;
+		position: relative;
+		.header_img_bg{
+			@include s_cale(107,107,0);
+			margin-left: 26 / 75 * 1rem;
+			margin-top: 0.2rem;
+			margin-right: 20 / 75 * 1rem;
+			.header_img{
+				@include s_cale(98,99,0);
+				@include rounded(99);
+			}
+		}
+		.text{
+			color: #fff;
+			@include double_font(36);
+			margin-top: 0.15rem;
+			@include ell(0,1);
+			.til{
+				width: 90%;
+				@include ell(0,1);
+			}
+			.tex{
+				@include double_font(24);
+			}
+		}
+		.right{
+			color: #fff;
+			margin-top: 0.5rem;
+			margin-right: 0.2rem;
+			@include double_font(24);
+			img{
+				@include s_cale(14,25,0);
+				float: right;
+				margin-left: 0.2rem;
+				margin-top: 0.1rem;
+			}
+		}
+	}
+	.imgs{
+		border-top:1px solid #eee;
+		background-color:#fff;
+		padding:27 / 75 * 1rem 0px;
+		padding-left: 22 / 75 * 1rem;
+		margin-top: 10px;
+		@include clearfix();
+		li{
+			position:relative;
+			float: left;
+			.photo{
+				@include s_cale(118,118,0);
+				@include rounded(5);
+				margin-right: 0.15rem;
+			}
+			.close{
+				@include s_cale(31,31,0);
+				position: absolute;
+				left: -4px;top:-6px;
+			}
+		}
+	}
+	.list{
+		border-top:1px solid #eee;
+		background-color:#fff;
+		padding-left: 22 / 75 * 1rem;
+		margin-top: 10px;
+		li{
+			line-height: 92 / 75 * 1rem;
+			padding-left: 22 / 75 * 1rem;
+			border-bottom: 1px solid #eee;
+			@include double_font(32);
+			color: #595959;
+			.photo{
+				@include s_cale(118,118,0);
+				float: left;margin-right:0.2rem;
+				position: relative;
+				.close{
+					@include s_cale(31,31,0);
+					position:absolute;
+					left: -4px;
+					top: -6px;
+				}
+			}
+			input{
+				width: 100%;
+				border:0px;outline:0px;
+				text-align: right;
+				line-height: 92 / 75 * 1rem;
+				@include double_font(32);
+				color: #595959;
+			}
+			.project{
+				@include s_cale(38,38,0);
+				margin-top: 0.36rem;
+				margin-right: 0.2rem;
+			}
+			.right_icon{
+				@include s_cale(14,25,0);
+				margin-top: 0.45rem;
+				margin-right: 0.3rem;
+				margin-left: 0.3rem;
+			}
+			.chat{
+				@include s_cale(32,39,0);
+				margin-top: 0.36rem;
+				margin-right: 0.3rem;
+			}
+		}
+	}
+	.f{@include fixedBtn();}
+}
+//发布商品
+.release{
+	.top_del{
+		padding-top:20 / 75 * 1rem;
+		background:#fff;
+		padding-left: 22 / 75 * 1rem;
+		.t,.b{
+			@include s_cale(100%,1,24);
+			color: #797979;
+			padding-bottom: 0.2rem;
+			border-bottom:1px solid #eee;
+			input{
+				@include s_cale(100%,55,24);
+				@include _lineHeight(55);
+				border:0px;outline:0px
+			}
+		}
+		.b{
+			margin-top: 0.2rem;padding-bottom:0.5rem;border-bottom:0px;
+		}
+	}
+	.imgs{
+		margin-top: 0px;border-top:0px
+	}
+	.downgoods{
+		background-color:#f27920;
+	}
+	.delgoods{
+		background-color:#ff4343;
+	}
+	.sendgoods{
+		background-color:#ff0000;
+	}
+}
+//管理商品
+.managegoods{
+	li{
+		padding-left:25 /75 * 1rem;
+		padding-top:34/75 * 1rem;
+		border-bottom:1px solid #eee;
+		position:relative;
+		background:#fff;
+		.right_icon{
+			@include s_cale(14,25,24);
+			position:absolute;
+			margin-top: -12 / 75 * 1rem;
+			top: 50%;
+			right:5px;
+		}
+		.line{
+			position:absolute;
+			bottom:-1px;
+			left:0px;
+			height:1px;
+			width: 160 / 75 * 1rem + 14/75 * 1rem + 25 /75 * 1rem;
+			background:#fff
+		}
+	}
+	.photo{
+		@include s_cale(160,160,24);
+		margin-right: 14/75 * 1rem;
+		margin-bottom: 34/75 * 1rem;
+		border-bottom:1px solid #fff;
+	}
+	.top{
+		.names{
+			color: #323232;
+			@include double_font(32);
+			@include ell(0,2);
+		}
+		.num{
+			color: #7e7e7e;
+			@include double_font(24);
+			margin-left: 0.1rem;
+			margin-right:0.3rem;
+		}
+	}
+	.bottom{
+		color: #ff4200;
+		margin-top: 0.5rem;
+		@include double_font(20);
+		span{
+			@include double_font(30);
+		}
+	}
+}
+//店铺详情
+.store_manage{
+	.fixed{
+		background-color:#f4f4f4;
+		width: 100%;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		z-index: 99;
+	}
+	.like{
+		margin-top: 0.2rem;
+		@include double_font(24);
+		color: #ffffff;
+		img{
+			@include s_cale(21,20,24);
+			margin-right: 0.1rem;
+			margin-top: 0.05rem;
+		}
+		span{
+			margin-left: 0.1rem;
+		}
+	}
+	.like_icon{
+		margin-right: 0.3rem;
+		.icon{
+			@include s_cale(47,48,18);
+			margin: 0 auto;
+			margin-top: 0.1rem;
+			margin-bottom: 0.1rem;
+		}
+		color: #ffffff;
+		@include double_font(18);
+	}
+	.footers{
+		color: #fffefe;
+		@include double_font(24);
+		margin-top: 0.45rem;
+		img{
+			@include s_cale(25,25,18);
+			margin-top: 0.05rem;margin-right:0.2rem;
+		}
+	}
+	.split{
+		background:rgba(#eee,0.27);
+		height: 1px;
+		position:absolute;
+		bottom:0.8rem;
+		width: 10rem - (153 / 75 * 1rem);
+		left:153 / 75 * 1rem;
+	}
+	.nav{
+		margin-top: 8px;
+		border-top:1px solid #eee;
+		border-bottom:1px solid #eee;
+		color: #606262;
+		@include s_cale(100%,70,30);
+		@include _lineHeight(70);
+		div{
+			border-bottom:2px solid #fff;
+		}
+		background:#fff;
+		text-align: center;
+		div.on{
+			color: #f27920;
+			border-bottom:2px solid #f27920;
+		}
+	}
+	.project{
+		background:#fff;
+		margin-top: 301 / 75 * 1rem;
+		.lefttoul{
+			background:#f5f5f5;
+			div{
+				position:relative;
+				@include s_cale(184,122,30);
+				@include _lineHeight(122);
+				border-right:1px solid #eee;
+				color: #606262;
+				@include double_font(30);
+				text-align: center;
+				&.on{
+					
+					background:#fff;
+				}
+				img{
+					@include s_cale(32,43,30);
+					margin-top:0.4rem;
+					margin-left: 0.5rem;
+					margin-right: 0.15rem;
+				}
+				&.clear{
+					@include clearfix();
+				}
+				.nums{
+					display: none;
+					@include double_font(20);
+					color: #fff;
+					position: absolute;background: #ff4200;width: 12px;height: 12px;border-radius: 12px;line-height: 15px;text-align: center;right: 0px;top: 5px;
+				}
+			}
+		}
+		.righttoul{
+			.topx{
+				background:#fbfbfb;
+				color: #606262;
+				@include s_cale(100%,60,24);
+				@include _lineHeight(60);
+				text-indent: 12px;
+			}
+			ul{
+				padding-left:0.2rem;
+				li{
+					padding: 0.5rem 0;
+					border-bottom:1px solid #eee;
+					.img{
+						@include s_cale(112,112,24);
+						@include rounded(5);
+						margin-right: 0.2rem;
+					}
+					.jian{
+						@include s_cale(52,52,24);
+						margin-top: 0.5rem;
+						opacity: 0;
+					}
+					.ss{
+						@include s_cale(26,26,24);
+						color: #606262;
+						margin-top: 0.6rem;
+						margin-right: 0.1rem;
+						margin-left: 0.1rem;
+						text-align: center;
+					}
+					.add{
+						@include s_cale(52,52,24);
+						margin-top: 0.5rem;
+						margin-right: 0.1rem;
+					}
+					.flex_item{
+						.names{
+							color: #606262;
+							@include double_font(36);
+						}
+						.info{
+							color:#606262;
+							@include double_font(24);
+						}
+						.money{
+							color: #ff4200;
+							@include double_font(30);
+						}
+					}
+				}
+			}
+		}
+	}
+	.f{
+		@include fixedBtn(#fff);
+		.card_icon{
+			@include s_cale(66,65,24);
+			margin-top: 0.1rem;
+			margin-left: 0.15rem;
+			.nums{
+				position: absolute;background: #ff4200;width: 12px;height: 12px;border-radius: 12px;font-size: 0.24rem;line-height: 15px;text-align: center;right: -2px;top: -2px;
+			}
+		}
+		.allmoney{
+			color: #999999;
+			margin-left: 0.15rem;
+			margin-right: 0.15rem;
+			@include double_font(30);
+			span{
+				color: #ff4200;
+				a{
+					@include double_font(24);
+				}
+			}
+		}
+		.rem{
+			margin-left: 0.15rem;
+			margin-right: 0.15rem;
+			color: #999999;
+			@include double_font(24);
+		}
+		.btn{
+			color: #ffffff;
+			@include double_font(30);
+			background:#f27920;text-align:center;
+		}
+	}
+	.chat{
+		margin-top: 301 / 75 * 1rem;
+		.tops{
+			padding:40 / 75 * 1rem 0;
+			background:#fff;
+			.lefts{
+				border-right:1px solid #d2d2d2;
+				width: 286 / 75 *1rem;
+				text-align: center;
+				margin-right: 0.5rem;
+			}
+			.counts{
+				color: #f27920;
+				@include double_font(60);
+				margin-bottom: 0.15rem;
+			}
+			.rem{
+				color: #606262;
+				@include double_font(24);
+				margin-bottom: 0.1rem;
+			}
+			.rems{
+				color: #959595;
+				@include double_font(24);
+			}
+			ul li{
+				margin-bottom: 0.25rem;
+				.name{
+					color: #606262;
+					@include double_font(24);
+					margin-right: 0.3rem;
+				}
+				img{
+					@include s_cale(21,20,24);
+					margin-right: 0.1rem;
+					margin-top: 0.05rem;
+				}
+			}
+		}
+		.discuss{
+			background:#fff;
+			margin-top: 8px;border-top:1px solid #eee;
+			padding-top:42 / 75 * 1rem;
+			.btn{
+				padding:0 24 / 75 * 1rem;
+				@include clearfix();
+				padding-bottom:40 / 75 * 1rem;
+				border-bottom:1px solid #eee;
+				span{
+					color: #595959;
+					@include s_cale(120,50,24);
+					@include rounded(50);
+					padding:0 0.2rem;
+					border:1px solid #dcdcdc;
+					display: block;float:left;
+					text-align: center;
+					@include _lineHeight(50);
+					margin-right: 0.3rem;
+					margin-bottom: 0.2rem;
+					&.on{
+						background:#f27920;color:#fff;
+						border:1px solid #f27920;
+					}
+				}
+			}
+			ul{
+				li{
+					border-bottom:1px solid #eeeeee;
+					padding:24 / 75 * 1rem;
+					.topb{
+						@include s_cale(100%,75,24);
+						@include _lineHeight(75);
+						.img{
+							@include s_cale(75,75,24);
+							@include rounded(75);
+							margin-right: 0.2rem;
+						}
+						.tx{
+							color: #595959;
+							@include double_font(30);
+						}
+					}
+					.info{
+						margin-top:0.3rem;
+						color: #595959;
+						@include double_font(30);
+					}
+					.moreinfo{
+						margin-top:0.2rem;
+						color: #a5a5a5;
+						@include double_font(30);	
+					}
+				}
+			}
+		}
+	}
+	.storeinfo{
+		margin-top: 300 / 75 * 1rem;
+		.topf{
+			background:#fff;
+			ul {
+				padding:24 / 75 * 1rem 32 / 75 * 1rem;
+				li{
+					margin-bottom: 0.15rem;
+					.img{
+						@include s_cale(33,33,24);
+					}
+					.flex_item{
+						color: #595959;
+						@include double_font(30);
+						margin-left: 0.2rem;
+					}
+					.jian{
+						@include s_cale(33,33,24);
+					}
+					.new{
+						@include s_cale(35,33,24);	
+					}
+				}
+			}
+		}
+		.storeinfo_del{
+			background:#fff;
+			margin-top: 10px;
+			border-top:1px solid #eee;
+			padding-left:24 / 75 * 1rem;
+			padding-bottom:0.5rem;
+			li{
+				border-bottom:1px solid #eee;
+				$imgList:(storeinfoa,33,33,0.35),(storeinfob,32,36,0.35),(storeinfoc,34,34,0.38),(storeinfod,32,32,0.38),(storeinfoe,34,26,0.45),(storeinfof,33,25,0.45);
+				@each $name, $width, $height,$margin in $imgList{
+					.#{$name}{
+						@include s_cale($width,$height,0);
+						margin-right: 0.3rem;
+						margin-top: $margin * 1rem;
+					}
+				}
+				.flex_item{
+					color: #595959;
+					@include double_font(30);
+					line-height:94 / 75 * 1rem;
+				}
+				.right_icon{
+					@include s_cale(14,25,0);
+					margin-top: 0.5rem;
+					margin-right: 0.5rem;
+				}
+				.photo_list{
+					@include clearfix();
+					div{
+						@include s_cale(118,118,0);
+						@include rounded(5);
+						margin-right: 0.15rem;
+						float: left;
+					}
+				}
+			}
+		}
+	}
+}
+//店铺信息
+.storeinfo{
+	ul{
+		padding-left:0.2rem;
+		background:#fff;
+		li{
+			border-bottom:1px solid #eee;
+			color: #595959;
+			@include double_font(32);
+			.names{
+				color: #595959;
+				@include double_font(32);
+				@include _lineHeight(128);
+			}
+			.header_img{
+				@include s_cale(98,98,0);
+				margin-top: 0.2rem;
+			}
+			.right_icon{
+				@include s_cale(14,25,0);	
+				margin-top: 0.65rem;
+				margin-right: 0.3rem;
+				margin-left: 0.3rem;
+			}
+			.txt{
+				color: #9c9c9c;
+				@include double_font(32);
+				input{
+					border:0px;outline:0px;
+					@include double_font(32);
+					width: 100%;
+					background:url(0) no-repeat;
+					height: 124 / 75 *1rem;
+					text-align: right;
+				}
+			}
+			.zhizhao{
+				@include s_cale(100,100,0);
+				margin-top: 0.2rem;
+			}
+			&.clear{
+				@include clearfix();
+				margin-top: 0.2rem;
+				padding-bottom: 0.4rem;
+			}
+			.photo{
+				@include s_cale(118,118,0);
+				float: left;margin-right:0.2rem;
+				position: relative;
+				.close{
+					@include s_cale(31,31,0);
+					position:absolute;
+					left: -4px;
+					top: -6px;
+				}
+			}
+		}
+	}
+	.btn{
+		margin-top: 6px;
+		border-top:1px solid #eee;
+		background: #f27920;
+		height: 1.13rem;
+		line-height: 1.13rem;
+		width: 100%;text-align: center;
+		color: #fff;
+		@include double_font(30);
+		letter-spacing: 1px;
+	}
+	.pos{
+		margin-top: 0.5rem;
+		padding-left:0.3rem;
+		margin-bottom: 0.5rem;
+		@include double_font(26);
+		color: #cbcbcb;
+		a{
+			color: #f27920
+		}
+		img{
+			@include s_cale(25,25,0);
+			margin-top: 0.05rem;
+			margin-right: 0.15rem;
+		}
+	}
+}
+//商品详情
+.commodity{
+	.index_banner{
+		position: relative;
+		.bd li{
+			@include s_cale(100%,706,0);
+		}
+		.hd {
+			@include s_cale(30%,40,0);
+			width: 15%;
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			li{
+				@include s_cale(20,20,0);
+				@include rounded(20);
+				background:#fff;
+				display: inline-block;
+				margin-right: 4px;
+				&.on{
+					background:#4fa7df;
+				}
+			}
+		}
+	}
+	.detail{
+		padding:0.2rem 0.3rem;
+		background:#fff;
+		.names{
+			color: #606262;
+			@include double_font(36);
+		}
+		.info{
+			color: #606262;@include double_font(24);
+			margin-top: 0.2rem;
+			margin-bottom: 0.15rem;
+		}
+		.money{
+			color: #ff4200;@include double_font(36);	
+		}
+	}
+	.top_bg{
+		padding-top:24 / 75 * 1rem;
+		margin-top: 6px;
+		border-top:1px solid #eee;
+		@include s_cale(100%,176,0);
+		background:#fff;
+		position: relative;
+		.header_img_bg{
+			@include s_cale(107,107,0);
+			margin-left: 26 / 75 * 1rem;
+			margin-top: 0.2rem;
+			margin-right: 20 / 75 * 1rem;
+			.header_img{
+				@include s_cale(98,99,0);
+				@include rounded(99);
+			}
+		}
+		.text{
+			color: #323232;
+			@include double_font(36);
+			margin-top: 0.15rem;
+			@include ell(0,1);
+			.til{
+				width: 90%;
+				@include ell(0,1);
+			}
+			.tex{
+				@include double_font(24);
+			}
+		}
+		.like{
+			margin-top: 0.2rem;
+			@include double_font(24);
+			color: #323232;
+			img{
+				@include s_cale(21,20,0);
+				margin-right: 0.1rem;
+				margin-top: 0.05rem;
+			}
+			span{
+				margin-left: 0.1rem;
+			}
+		}
+		.footers{
+			color: #323232;
+			@include double_font(24);
+			margin-top: 0.36rem;
+			img{
+				@include s_cale(25,25,0);
+				margin-top: 0.05rem;margin-right:0.2rem;
+			}
+		}
+		.split{
+			background:#eee;
+			height: 1px;
+			position:absolute;
+			bottom:0.8rem;
+			width: 10rem - (153 / 75 * 1rem);
+			left:153 / 75 * 1rem;
+		}
+		.dir{
+			color: #323232;
+			@include double_font(24);
+			margin-right:0.3rem;
+		}
+	}
+	.ns{
+		line-height: 1rem;
+		border-top: 1px solid #eee;
+		background:#fff;
+		margin-top: 6px;
+		@include double_font(30);
+		color: #595959;
+		border-bottom:1px solid #eee;
+		div{
+			text-align: center;
+			border-bottom:2px solid #fff;
+		}
+		.on{
+			color: #f27920;
+			border-bottom:2px solid #f27920;
+		}
+	}
+	.detail_info{
+		padding:0.2rem 0.3rem;
+		background:#fff;
+		.info{
+			@include double_font(24);
+			color: #595959;
+			margin-bottom: 0.2rem;
+		}
+		.img{
+			background:#fff;
+			@include clearfix();
+		}
+		img{
+			height: auto;
+		}
+	}
+	.f{
+		@include fixedBtn(#fff);
+		height: 1.3rem;
+		line-height: 1.3rem;
+		.store{
+			width: 126 / 75 * 1rem;
+			border-right:1px solid #eee;
+			color: #595959;
+			text-align: center;
+			line-height:1.4;
+			@include double_font(22);
+			.img{
+				margin: 0 auto;
+				@include s_cale(39,40,0);
+				margin-top: 0.16rem;
+			}
+		}
+		.like{
+			line-height:1.4;
+			width: 126 / 75 * 1rem;
+			color: #595959;
+			text-align: center;
+			line-height:1.4;
+			@include double_font(22);
+			.img{
+				margin: 0 auto;
+				@include s_cale(39,40,0);
+				margin-top: 0.16rem;
+			}
+		}
+		.addcard{
+			background:#f27920;
+			color: #fff;
+			text-align: center;
+			@include double_font(30);
+		}
+		.buy{
+			background:#e81f27;
+			color: #fff;
+			text-align: center;
+			@include double_font(30);
+		}
+	}
+	.discuss{
+		background:#fff;
+		padding-top:42 / 75 * 1rem;
+		.btn{
+			padding:0 24 / 75 * 1rem;
+			@include clearfix();
+			padding-bottom:40 / 75 * 1rem;
+			border-bottom:1px solid #eee;
+			span{
+				color: #595959;
+				@include s_cale(120,50,24);
+				@include rounded(50);
+				padding:0 0.2rem;
+				border:1px solid #dcdcdc;
+				display: block;float:left;
+				text-align: center;
+				@include _lineHeight(50);
+				margin-right: 0.3rem;
+				margin-bottom: 0.2rem;
+				&.on{
+					background:#f27920;color:#fff;
+					border:1px solid #f27920;
+				}
+			}
+		}
+		ul{
+			li{
+				border-bottom:1px solid #eeeeee;
+				padding:24 / 75 * 1rem;
+				.topb{
+					@include s_cale(100%,75,24);
+					@include _lineHeight(75);
+					.img{
+						@include s_cale(75,75,24);
+						@include rounded(75);
+						margin-right: 0.2rem;
+					}
+					.tx{
+						color: #595959;
+						@include double_font(30);
+					}
+				}
+				.info{
+					margin-top:0.3rem;
+					color: #595959;
+					@include double_font(30);
+				}
+				.moreinfo{
+					margin-top:0.2rem;
+					color: #a5a5a5;
+					@include double_font(30);	
+				}
+			}
+		}
+	}
+}

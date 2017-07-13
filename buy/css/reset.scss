@@ -1,0 +1,128 @@
+@import 'mixin.scss';
+@include comment();
+
+//旋转动画 360度
+@include keyname(rightrotate){
+	0%{
+		@include keyrotate(0deg)
+	}
+	100%{
+		@include keyrotate(360deg)
+	}
+}
+
+input{
+	margin:0px !important;padding:0px !important;
+}
+.footer_toul{
+	@include fixedBtn(#fff);
+	padding:0.1rem 0px;
+	border-top:1px solid #eee;
+	.home{
+		@include s_cale(41,41,30);
+		margin:0 auto;
+	}
+	.lbs{
+		@include s_cale(28,38,30);
+		margin:0 auto;
+		margin-top: 0.03rem;
+	}
+	.car{
+		@include s_cale(37,36,30);
+		margin:0 auto;
+		margin-top: 0.05rem;
+	}
+	.peo{
+		@include s_cale(28,33,30);
+		margin:0 auto;
+		margin-top: 0.09rem;
+	}
+	@include double_font(22);
+	color:#595959;
+	text-align:center;
+	.text{
+		line-height:0.8rem;
+	}
+	.on{
+		color: #f27920;
+	}
+}
+.listdrop{
+	background:#fff;
+	display:none;
+	padding:0 0.8rem;
+	position: relative;
+	z-index: 9;
+	div{
+		line-height: 0.8rem;
+		@include double_font(30);
+		color:#595959;
+		text-align:right;
+		border-bottom:1px solid #eee;
+	}
+	div:nth-last-child(1){
+		border-bottom:0px
+	}
+}
+.arealist{
+	position:fixed;
+	z-index: 100;
+	height:80%;
+	top:1.3rem;
+	background:#f4f4f4;
+	width:100%;
+	overflow-y:auto;
+	a{
+		text-indent: 26px;
+		padding:0.2rem 0px;
+		border-bottom:1px solid #fff;
+		@include double_font(26);
+		color: #9c9c9c;
+		display: block;
+	}
+	.title{
+		background:#fff;
+		padding:0.2rem 0px;
+		@include double_font(26);
+		text-indent: 24px;
+	}
+}
+.topFiexdBtn{
+	background:url(0) no-repeat;
+	width:100%;
+	height:1.2rem;
+	line-height:1.2rem;
+	@include double_font(28);
+	color:#fff;
+	background:#f27920;
+	text-align:center;
+	top:0px;left:0px;
+	position:fixed;
+	z-index:20;
+	.returnBtn{
+		@include s_cale(24,43,0);
+		position:absolute;
+		margin-left: 0.3rem;
+		margin-top: 0.3rem;
+	}
+}
+.kong2{height:1.2rem;position:relative;z-index:3}
+@media screen and (max-width:320px){
+	.lbs ul li .top_bg .footers img{margin-top:0.05rem !important;}
+}
+.shareBtn{
+	width:1rem;@include rounded(5);border:1px solid #f27920;@include double_font(28);margin:10px auto;padding:0.2rem 0.5rem;color:#fff;text-align:center;background:#f27920
+}
+.textarea{
+	padding-right:44 / 75 * 1rem;
+	margin-top:0.2rem;
+	textarea{
+		min-height: 2.5rem;
+		@include double_font(24);
+	}
+}
+
+.comfirm .head{background: #f27920;height: 2.7rem;line-height: 2.7rem;color: #Fff;@include double_font(30);position: relative;}
+.comfirm .head .txt{margin-left: 2.8rem;}
+.comfirm .head .txt a{position: absolute;font-size:0.24rem;color: #fff;top: 0.5rem;left: 1.3rem}
+.comfirm .head .img{width: 1.73rem;height: 2rem;margin-left: 0.8rem;margin-top: 0.3rem}

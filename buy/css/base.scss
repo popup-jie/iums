@@ -1,0 +1,995 @@
+@import 'mixin.scss';
+//收货地址
+.getGoods{
+	ul{
+		li{
+			height: 1.46rem;border-bottom: 1px solid #e5e9ec;padding: 0.53rem 0.32rem;background: #fff;
+			&.active{
+				background: #788ba3;
+				div{
+					color: #fff;
+				}
+				span{
+					display: inline-block;
+				}
+				.right img{
+					display: block
+				}
+			}
+			&.on .right img{display: block}
+			div{color: #797979;}
+			.left{width: 8.6rem;}
+			.top{@include double_font(36);
+			}
+			.bottom{@include double_font(26);margin-top: 0.3rem}
+			.right{@include s_cale(36,36,0);
+				img{width: 100%;margin-top: 0.48rem;}
+			}
+			span{margin-right: 0.1rem;display: none}
+		}
+	}
+	.tops{
+		@include s_cale(0,1,30);
+		padding: 0.2rem 0.2rem;
+		color: #9c9c9c;
+		text-align: right;
+		background:#fff;
+		border-bottom: 1px solid #eee;
+	}
+	.f{@include fixedBtn()}
+}
+
+
+/*编辑收货地址*/
+.getGoodsChange ul{
+	padding-left:10px;
+	background: #fff;
+}
+.getGoodsChange ul li{border-bottom: 1px solid #e5e9ec;
+	@include s_cale(1,92,0);
+	
+	@include _lineHeight(92);
+}
+.getGoodsChange ul li .name{color: #595959;@include double_font(32);}
+.getGoodsChange ul li .input{margin-right:10px;	@include _lineHeight(92);
+	@include s_cale(1,92,0);}
+.getGoodsChange ul li .input input{color: #595959;border: 0px;outline: 0px;width:100%;height:100%;text-align:right;@include double_font(32);}
+.getGoodsChange .f{line-height: 1.13rem;position: fixed;bottom: 0px;width: 100%;text-align: center;color: #fff;
+	@include double_font(32);
+	z-index: 99;letter-spacing: 1px}
+.getGoodsChange .del{background: #d1292c;color: #fff;width: 50%;float:left;}
+.getGoodsChange .save{background: #f27920;color: #fff;width: 50%;float:left;}
+
+/*我的评价*/
+.myChat2 .cons{padding:0.4rem 0.28rem;background: #fff}
+.myChat2 .cons textarea{width: 100%;outline: 0;border: 0px;min-height: 2.53rem;resize:none;
+@include double_font(28)}
+.myChat2 .f {background: #fff; padding:0.4rem 0.28rem;border-top: 1px solid #e5e9ec}
+.myChat2 .f .list{height: 0.8rem}
+.myChat2 .f .name{@include double_font(36);color: #595959;width: 3.25rem;line-height: 0.75rem}
+.myChat2 .f .goodbad{height: 0.60rem;line-height: 0.50rem}
+.myChat2 .f .goodbad img{width: 0.50rem;height: 0.50rem;margin-right: 0.2rem;margin-top:0.15rem;}
+.myChat2 .footer{@include fixedBtn()}
+
+//我的邀请码
+.myCode{
+	background:url("../img/mycode_bg.jpg");
+	background-size:100% 100%;
+	width:100%;height:100%;
+	.cons{
+		position:relative;
+		top:297 / $cal * 1rem;
+	}
+	.nav{
+		margin:0 auto;
+		width: 670 / 75 * 1rem + 5 * 0.1rem;
+		li{
+			border:2px solid #f27920;
+			background:#fff;
+			@include rounded(102);
+			@include s_cale(102,102,72);
+			@include _lineHeight(102);
+			color: #f27920;
+			text-align: center;
+			float:left;
+			margin-right: 0.1rem;
+		}
+		li:nth-child(6){
+			margin-right: 0px;
+		}
+		@include clearfix();
+	}
+	.split_line{
+		width: 587 / 75 * 1rem;
+		height: 1px;
+		background:#f27920;
+		margin: 0 auto;
+		margin-top: 65 / 75 * 1rem;
+		position:relative;
+		div{
+			color: #f27920;
+			@include double_font(30);
+			text-align: center;
+			height: 32 / 75 * 1rem;
+			line-height: 32 / 75 * 1rem;
+			width: 220 / 75 * 1rem;
+			position:absolute;
+			left: 50%;top:50%;
+			margin: -16 / 75 * 1rem 0 0 -110/ 75 * 1rem;
+			background:#fff;
+		}
+	}
+	.uls{
+		margin-top:1rem;
+		
+		.flex{
+			padding:0 56 / 75 * 1rem;
+			padding-bottom: 0.5rem;
+			line-height: 1rem;
+			background: #fff;
+			img{
+				@include s_cale(75,75,0);
+			}
+			div{
+				color:#777777;
+				@include double_font(30)
+			}
+			.names{
+				text-indent: 12px;
+			}
+		}
+	}
+}
+//提现账户
+.myCash{
+	ul.lists li{
+		padding-top: 30 / 75 * 1rem;
+		@include s_cale(710,193,0);
+		margin: 0 auto;
+		color: #fff;
+		margin-top: 10px;
+		@include clearfix();
+		._tits{
+			@include double_font(36);
+			@include ell(0,100);
+		}
+		._tit_name{
+			@include double_font(24);
+			margin-top: 18 / 75 * 1rem;
+			@include ell(0,100);
+		}
+		._num{
+			@include double_font(40);
+			margin-top: 25 / 75 * 1rem;
+			@include ell(0,100);
+		}
+		.names{
+			@include double_font(36);
+			margin-right: 29 / 75 * 1rem;
+			margin-left: 10px
+		}
+		.icon{
+			margin-left: 29 / 75 * 1rem;
+		}
+	}
+	.photobga{
+		background:url(../img/photobga.png);
+		background-size:100% 100%;
+		.icon{
+			@include s_cale(88,88,0);
+			margin-right: 30 / 75 * 1rem;
+		}
+	}
+	.photobgb{
+		background:url(../img/photobgb.png);
+		background-size:100% 100%;
+		.icon{
+			@include s_cale(90,76,0);
+			margin-right: 25 / 75 * 1rem;
+		}
+	}
+	.photobgc{
+		background:url(../img/photobgc.png);
+		background-size:100% 100%;
+		.icon{
+			@include s_cale(82,64,0);
+			margin-right: 30 / 75 * 1rem;
+		}
+	}
+	.f{@include fixedBtn()}
+	.kong{height: 1.3rem;position: relative;}
+
+	.top_list{
+		padding:0 10px;
+		padding-right:0px; 
+		margin-bottom: 0.3rem;
+		.names{
+			color: #565656;
+			@include double_font(30);
+		}
+		.input{
+			border-bottom: 1px solid #eee;
+			padding-bottom: 0.2rem;
+			@include s_cale(100%,68,30);
+			input{
+				border:0px;outline:0px;@include s_cale(100%,68,28);@include _lineHeight(68);
+			}
+		}
+	}
+	.paylist{
+		padding:0 10px;
+		background:#fff;
+		margin-top: 10px;
+		border-top:1px solid #eee;
+		border-bottom:1px solid #eee;
+		li{
+			color: #7a7a7a;
+			border-bottom:1px solid #eee;
+			@include s_cale(100%,88,30);
+			@include _lineHeight(88);
+			.flex_item{
+				margin-left: 0.2rem;
+			}
+			.btn{
+				@include s_cale(41,41,30);
+				background-image:url(../img/getfalse_icon.png);
+				background-size:100% 100%;
+				@include rounded(41);
+				margin-left: 0.1rem;
+				margin-top: 0.3rem
+			}
+			&.on{
+				.btn{
+					background-image:url(../img/gettrue_icon.png);
+				}
+			}
+		}
+		li:nth-child(3){
+			border-bottom:0px;
+		}
+		.wechat{
+			@include s_cale(44,39,30);
+			margin-top: 0.25rem;
+		}
+		.alipay{
+			@include s_cale(42,42,30);
+			margin-top: 0.25rem;
+		}
+		.card{
+			@include s_cale(42,33,30);
+			margin-top: 0.3rem;
+		}
+	}
+	.footer_rem{
+		margin-top: 32 / 75 * 1rem;
+		color: #cbcbcb;
+		margin-left: 15px;
+		@include double_font(26);
+		img{
+			@include s_cale(25,25,30);
+			margin-right: 5px;
+		}
+		a{
+			color: #f27920;
+		}
+	}
+	.footer_btn{
+		background:#f27920;margin:0 auto;
+		@include s_cale(90%,90,36);
+		color: #ffffff;
+		text-align: center;
+		@include _lineHeight(90);
+		@include rounded(5);
+		margin-top: 0.5rem;
+	}
+}
+//交易记录
+ul.dealReacord{
+	li{
+		border-bottom:1px solid #eee;
+		padding-top: 20 / 75 * 1rem;
+		padding-bottom: 34 / 75 * 1rem;
+		padding-left:50/ 75 * 1rem;
+		padding-right:36 / 75 * 1rem;
+	}
+	.top{
+		color: #535353;
+		@include double_font(30);
+		margin-bottom: 0.2rem;
+		.flex_item{
+			@include ell(0,1)
+		}
+		.time{
+			color: #bcbcbc;
+			@include double_font(24);
+			margin-left: 0.15rem;
+		}
+	}
+	.bottom{
+		color: #535353;
+		@include double_font(24);
+		.flex_item{
+			line-height: 1.4;
+		}
+		.money{
+			color: #f27920;
+			@include double_font(34);
+			margin-left: 0.15rem;
+		}
+	}
+}
+
+//我的钱包
+.myWallet{
+	.topbg{
+		background-image:url(../img/mywallettop_bg.jpg);
+		background-size:100% 100%;
+		padding-top:40 / 75 * 1rem;
+		height: 140 / 75 * 1rem;
+		padding-bottom: 60 / 75 * 1rem;
+		.flex_item{
+			text-align: center;
+			div{
+				color: #fff;
+				@include double_font(72);
+			}
+			.ti{
+				color: rgba(#fff,0.45);
+				@include double_font(30);
+				margin-bottom: 20 / 75 * 1rem;
+			}
+		}
+		.bo{
+			border-right:1px solid rgba(#fff,0.5);
+		}
+	}
+	.steps{
+		@include s_cale(100%,160,0);
+		padding-top: 26 / 75 * 1rem;
+		background-color:#fff;
+		border-bottom:1px solid #eee;
+		ul.list{
+			@include s_cale(514,1,0);
+			@include clearfix();
+			margin: 0 auto;
+			li{
+				float:left;
+				text-align: center;
+			}
+			.step{
+				text-align:center;
+				.top_b{
+					@include s_cale(72,72,0);
+					background-color:#d2d2d2;
+					@include rounded(72);
+					.top_b1{
+						@include s_cale(64,64,0);
+						background-color:#eeeeee;
+						@include rounded(64);
+						margin-left: 4 / 75 * 1rem;
+						margin-top: 4 / 75 * 1rem;
+					}
+					color: #a9a9a9;
+					@include double_font(36);
+					@include _lineHeight(64);
+					margin: 0 auto;
+				}
+			}
+			.on{
+				.top_b{
+					background-color:#ff6000;
+					.top_b1{
+						color: #fff;
+						background-color:#ff994e;
+					}
+				}
+			}
+			.split{
+				@include s_cale(153,1,0);
+				height: 3px;
+				background:#d2d2d2;
+				margin-top: 33 / 75 * 1rem;
+			}
+		}
+		ul {
+			width: 90%;
+			margin: 0 auto;
+			margin-top: 0.2rem;
+			li{
+				text-align: center;
+				.ti{
+					color: #999999;
+					@include double_font(26);
+				}
+				.times{
+					color: #999999;
+					@include double_font(18);
+				}
+			}
+		}
+	}
+	.control_list{
+		border-top:1px solid #eee;
+		padding-left: 35 / 75 * 1rem;
+		background:#fff;
+		margin-top: 0.3rem;
+		li{
+			border-bottom: 1px solid #eee;
+			@include s_cale(100%,98,0);
+			@include _lineHeight(98);
+			.flex_item{
+				color: #999999;
+				@include double_font(30);
+			}
+			$index_list:('bank',42,33,0.4),('getmoney',43,43,0.35),('mywalletRecord',39,50,0.25);
+			@each $name, $width, $height, $marginTop in $index_list{
+				.#{$name}{
+					@include s_cale($width,$height,0);
+					margin-top : $marginTop * 1rem;
+					margin-right: 0.2rem;
+				}
+			}
+			.right_icon{
+				@include s_cale(14,25,0);
+				margin-top: 42 / 75 * 1rem;
+				margin-right: 0.4rem;
+			}
+		}
+	}
+}
+//代理商
+.agent{
+	padding-top: 70  / 75 * 1rem;
+	nav{
+		background-color:#fff;
+		border-bottom:1px solid #eee;
+		@include s_cale(100%,70,0);
+		@include _lineHeight(70);
+		div{
+			text-align: center;
+			@include double_font(30);
+			color: #606262;
+			border-bottom:2px solid #fff;
+			&.on{
+				color: #f27920;
+				border-bottom:2px solid #f27920;
+			}
+		}
+		position:fixed;
+		top: 1rem;;
+		left: 0px;
+		z-index: 99
+	}
+	ul{
+		padding-left: 30 / 75 * 1rem;
+		background:#fff;
+		li{
+			height: 122 / 75 * 1rem;
+			line-height: 122 / 75 * 1rem;
+			color: #777777;
+			border-bottom:1px solid #eee;
+			@include double_font(30);
+			.header_img{
+				@include s_cale(75,75,0);
+				@include rounded(75);
+				margin-right: 0.2rem;
+				margin-top: 0.25rem;
+			}
+			.telephone{
+				@include double_font(24);
+				margin-right: 0.2rem;
+			}
+		}
+	}
+}
+//冠军计划
+.champs{
+	.tops{
+		padding:0.2rem 0.3rem;
+		background:#fff;
+		border-bottom:1px solid #eee;
+		.icon{
+			@include s_cale(51,41,0);
+			margin-right:0.2rem;
+			margin-top: 0.02rem;
+		}
+		.flex_item{
+			color: #5d5d5d;
+			@include double_font(30);
+		}
+	}
+	.cons{
+		margin-top: 8px;
+		padding:0 0.3rem;
+		background:#fff;
+		li{
+			padding:0.3rem 0;
+			border-bottom:1px solid #eee;
+			.tp{
+				margin-bottom: 0.2rem;
+				.icon{
+					@include s_cale(31,31,0);
+					margin-right: 0.2rem;
+				}
+				.time{
+					color: #959595;
+					@include double_font(24);
+				}
+				.flex_item{
+					color: #323232;
+					@include double_font(30);
+				}
+			}
+			.flex{
+				&.ls{
+					line-height: 0.8rem;
+				}
+				color: #323232;
+				@include double_font(30);
+			}
+			.bgs{
+				@include s_cale(100%,14,0);
+				background:#f6f6f6;
+				border:1px solid #f27920;
+				@include rounded(14);
+				position:relative;
+				margin-top: 0.2rem;
+				.bg{
+					width: 50%;
+					position:absolute;
+					left: 0px;
+					top: 0px;
+					height: 100%;
+					background:#f27920;
+				}
+			}
+			.money{
+				@include s_cale(100%,1,22);
+				color: #323232;
+				margin-top: 0.2rem;
+				a{
+					color: #f27920;
+					@include double_font(24);
+				}
+			}
+		}
+	}
+}
+//附近
+.lbs{
+	.tops{
+		position: relative;
+		.dropmenu{
+			display: none;
+			z-index: 98;
+			position: absolute;
+			right: 0.3rem;
+			ul{
+				background:#383534;
+				border-radius:5px;
+			}
+			
+			width: 278 / 75 * 1rem;
+			.top_icon{
+				@include s_cale(27,23,0);
+				position: absolute;right:0.1rem;
+				top: -23 / 75 * 1rem;
+			}
+			.flex_item{
+				color: #ffffff;
+				line-height: 88 / 75  * 1rem;
+				@include double_font(30);
+			}
+			.imgs{
+				margin-top: 0.25rem;
+				margin-left: 0.3rem;
+				margin-right: 0.3rem;
+				@include s_cale(45,45,0);
+			}
+			li{
+				border-bottom:1px solid #434343;
+			}
+		}
+	}
+	.top{
+		position:fixed;
+		z-index: 99;
+		top: 0px;left:0;
+		width: 100%;
+		height: 2.4rem;
+		.dropmune{
+			background:#f4f4f4;
+			
+			li.lisv{
+				display: none;
+				div{
+					text-indent: 26px;
+					padding:0.2rem 0px;
+					border-bottom:1px solid #fff;
+					@include double_font(26);
+					color: #9c9c9c;
+				}
+			}
+			.clear{
+				@include clearfix();
+			}
+			.leftTO{
+				float:left;
+				width: 30%;
+				background:#fff;
+				overflow-y: auto;
+				li{
+					text-indent: 12px;
+					border-bottom:1px solid #eee;
+					@include double_font(26);
+					color: #9c9c9c;
+					padding:0.2rem 0px;
+					&.on{
+						background:#f27920;
+						color: #fff;
+					}
+				}
+			}
+			.rightTO{
+				float:left;
+				width: 70%;
+				overflow-y: auto;
+				li{
+					text-indent: 26px;
+					padding:0.2rem 0px;
+					border-bottom:1px solid #fff;
+					@include double_font(26);
+					color: #9c9c9c;
+				}
+			}
+		}
+	}
+	.search{
+		background:#f27920;
+		padding:0.3rem 0.3rem;;
+		.area{
+			color: #fff;
+			@include clearfix();
+			@include double_font(30);
+			margin-right: 0.5rem;
+			margin-top: 0.2rem;
+			img{
+				@include s_cale(20,11,0);
+				margin-top: 0.15rem;
+				margin-left: 0.1rem;
+			}
+		}
+		.ims{
+			@include s_cale(42,42,0);
+			margin-left: 0.3rem;
+			margin-top: 0.15rem;
+		}
+		.img{
+			@include s_cale(47,47,0);
+			margin-left: 0.3rem;
+			margin-top: 0.15rem;
+		}
+		.input{
+			@include clearfix();
+			background:rgba(#fff,0.15);
+			@include rounded(59);
+			@include s_cale(0,59,25);
+			@include _lineHeight(25);
+			.search_icon{
+				@include s_cale(35,35,0);
+				margin-top: 0.15rem;
+				margin-right: 0.25rem;
+				margin-left: 0.2rem;
+				color: #fff;
+			}
+			input{
+				border:0px;outline:0px;
+				background:url(0) no-repeat;
+				@include double_font(26);
+				width: 80%;
+				height: 58 / 75 * 1rem;
+				color: #fff;
+				@include _lineHeight(58);
+			}
+			::-webkit-input-placeholder{
+			　　color: #fff !important;
+			}
+			input[placeholder], [placeholder], *[placeholder]{
+			　　color: #fff !important;
+			}
+		}
+	}
+	.toptoul{
+		background:#fff;
+		border-bottom:1px solid #eee;
+		div{
+			position: relative;
+			line-height: 1rem;
+			color: #4d4d4d;
+			@include double_font(26);
+			text-align: center;
+			img{
+				@include s_cale(14,8,0);
+				position: absolute;top:0.45rem;
+				right: 0.8rem;
+			}
+		}
+		.on{
+			color: #f27920;
+		}
+	}
+	ul.cons{margin-top:2.4rem;}
+	ul li{
+		border-bottom:1px solid #eee;
+		.top_bg{
+			padding-top:24 / 75 * 1rem;
+			@include s_cale(100%,176,0);
+			background:#fff;
+			position: relative;
+			padding-bottom:0.2rem;
+			.header_img_bg{
+				@include s_cale(107,107,0);
+				margin-left: 26 / 75 * 1rem;
+				margin-top: 0.2rem;
+				margin-right: 20 / 75 * 1rem;
+				.header_img{
+					@include s_cale(98,99,0);
+					@include rounded(99);
+				}
+			}
+			.text{
+				color: #323232;
+				@include double_font(36);
+				margin-top: 0.15rem;
+				@include ell(0,1);
+				.til{
+					@include clearfix();
+					width: 90%;
+					@include ell(0,1);
+					img{
+						@include s_cale(111,31,0);float:left;
+						margin-left: 0.2rem;
+					}
+				}
+				.tex{
+					@include double_font(24);
+				}
+			}
+			.like{
+				margin-top: 0.2rem;
+				@include double_font(24);
+				color: #323232;
+				img{
+					@include s_cale(21,20,0);
+					margin-right: 0.1rem;
+					margin-top: 0.05rem;
+				}
+				span{
+					margin-left: 0.1rem;
+				}
+			}
+			.footers{
+				color: #323232;
+				@include double_font(24);
+				margin-top: 0.45rem;
+				img{
+					@include s_cale(25,25,0);
+					margin-top: 0.05rem;margin-right:0.2rem;
+				}
+			}
+			.split{
+				background:#eee;
+				height: 1px;
+				position:absolute;
+				bottom:0.8rem;
+				width: 10rem - (153 / 75 * 1rem);
+				left:153 / 75 * 1rem;
+			}
+			.dir{
+				color: #323232;
+				@include double_font(24);
+				margin-right:0.3rem;
+			}
+		}
+	}
+}
+.index{
+	.index_banner{
+		position: relative;
+		.bd li{
+			@include s_cale(100%,260,0);
+		}
+		.hd {
+			@include s_cale(30%,40,0);
+			width: 15%;
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			li{
+				@include s_cale(20,20,0);
+				@include rounded(20);
+				background:#fff;
+				display: inline-block;
+				margin-right: 4px;
+				&.on{
+					background:#4fa7df;
+				}
+			}
+		}
+	}
+	.model{
+		padding:0.2rem 0px;
+		background:#fff;
+		ul{margin-bottom:0.3rem;}
+		ul li{
+			text-align: center;
+			border-bottom:0px;
+			.img{
+				@include s_cale(94,94,0);
+				@include rounded(94);
+				margin: 0 auto;
+			}
+			div{
+				color: #4d4d4d;
+				@include double_font(30);
+				margin-top: 0.1rem;
+			}
+		}
+	}
+	.comment_item{
+		border-top:1px solid #eee;margin-top:6px;
+		background-color:#fff;
+		.img{
+			@include s_cale(375,200,0);
+		}
+		.tis{
+			border-bottom:1px solid #eee;
+			height: 1rem;
+			line-height: 1rem;
+			@include double_font(30);
+			color: #4d4d4d;
+			img{
+				margin-top: 0.3rem;
+				@include s_cale(30,30,0);
+				margin-left: 0.4rem;
+				margin-right: 0.1rem;
+			}
+		}
+	}
+	.tops{
+		position: relative;
+		.dropmenu{
+			display: none;
+			z-index: 98;
+			position: absolute;
+			right: 0.3rem;
+			ul{
+				background:#383534;
+				border-radius:5px;
+			}
+			
+			width: 278 / 75 * 1rem;
+			.top_icon{
+				@include s_cale(27,23,0);
+				position: absolute;right:0.1rem;
+				top: -23 / 75 * 1rem;
+			}
+			.flex_item{
+				color: #ffffff;
+				line-height: 88 / 75  * 1rem;
+				@include double_font(30);
+			}
+			.imgs{
+				margin-top: 0.25rem;
+				margin-left: 0.3rem;
+				margin-right: 0.3rem;
+				@include s_cale(45,45,0);
+			}
+			li{
+				border-bottom:1px solid #434343;
+			}
+		}
+	}
+}
+//提现
+.withdrawals{
+	.topTxt{
+		background:#fff;
+		padding:0.3rem 0.2rem;
+		.icon{
+			@include s_cale(80,80,0);
+			margin-right: 0.3rem;
+		}
+		.flex_item{
+			.tops{
+				color: #7a7a7a;
+				margin-top: 0.05rem;
+				@include double_font(36);
+			}
+			.topsg{
+				color: #7a7a7a;
+				margin-top: 0.05rem;
+				@include double_font(24);
+			}
+		}
+		.right_icon{
+			@include s_cale(14,25,0);
+			margin-top: 0.3rem;
+		}
+	}
+	.cons{
+		background:#fff;
+		padding:0.3rem 0.2rem;
+		padding-top:0.5rem;
+		margin-top: 6px;
+		border-top:1px solid #eee;
+		.tpx{
+			color: #7a7a7a;
+			@include double_font(24);
+			margin-bottom: 0.3rem;
+		}
+		.split{
+			border-bottom:1px solid #eee;
+			padding-bottom:0.2rem;
+			input{
+				width: 100%;
+				height:54 / 75 * 1rem;
+				line-height:54 / 75 * 1rem;
+				@include double_font(40);
+				border:0px;outline:0px;
+			}
+		}
+		.reminfo{
+			margin-top: 0.15rem;
+			color: #bcbcbc;
+			@include double_font(24);
+		}
+	}
+	.f{
+		@include fixedBtn();
+	}
+}
+.mineC{
+	ul{
+		li{
+			background:#fff;
+			padding:10px 0.2rem;
+			border-bottom:1px solid #eee;
+			.imgs{
+				@include s_cale(75,75,0);
+			}
+			.flex_item{
+				@include double_font(30);
+				color: #777777;
+				@include _lineHeight(75);
+				margin-left: 6px;
+			}
+			.rightV{
+				color: #f27920;
+				@include double_font(30);
+				@include _lineHeight(75);
+				margin-left: 6px;
+			}
+			.Ps{
+				color: #595959;
+				@include double_font(30);
+				margin-top:0.2rem;
+			}
+			.more{
+				line-height: 1rem;
+				height:1rem;
+				.time{
+					color: #a5a5a5;
+					@include double_font(24);
+				}
+				.tits{
+					color: #a5a5a5;
+					@include double_font(24);
+					margin-left: 6px;
+					@include ell(0,1);
+				}
+			}
+		}
+	}
+	
+}

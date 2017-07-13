@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<title>编辑商品</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css">
+		<link href="../../css/mui.picker.css"  type="text/css"  rel="stylesheet" />
+ 		<link href="../../css/mui.poppicker.css" type="text/css"  rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/store.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+		<script type="text/javascript" src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/mui.picker.js"></script>
+		<script type="text/javascript" src="../../js/mui.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/main.js"></script>
+		<style type="text/css">
+			.store_manage .list li{
+				padding-left: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="store_manage release">
+			<div class="topFiexdBtn">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>编辑商品</div>
+			</div>
+			<div class="kong2"></div>
+			<div class="top_del">
+				<div class="t">
+					<input type="text" name="" placeholder="请输入标题">
+				</div>
+				<div class="b">
+					<input type="text" name="" placeholder="请输入商品内容">
+				</div>
+			</div>
+			<ul class="imgs">
+				<li>
+					<div class="photo photobg">
+						<img src="../../img/stroremanagea.png"/>
+					</div>
+					<div class="close"><img src="../../img/closed_icon.png"/></div>
+				</li>
+				<li>
+					<div class="photo photobg">
+						<img src="../../img/stroremanagea.png"/>
+					</div>
+					<div class="close"><img src="../../img/closed_icon.png"/></div>
+				</li>
+				<li>
+					<div class="photo">
+						<img src="../../img/addphoto.png" onclick="$(this).next().click()"/>
+						<input type="file" style="display:none;" id="fileElem" />
+					</div>
+				</li>
+			</ul>
+			<ul class="list">
+				<li class="flex">
+					<div>价格</div>
+					<div class="flex_item"><input value="2000" /></div>
+					<div class="right_icon"><img src="../../img/right_icon2.png" /></div>
+				</li>
+				<li class="flex" id="types">
+					<div>分类</div>
+					<div class="flex_item"><input value="服装" readonly="readonly" /></div>
+					<div class="right_icon"><img src="../../img/right_icon2.png" /></div>
+				</li>
+				<li style='border-bottom: 0px;line-height: 1.70667rem;'>宝贝描述</li>
+				<li class="clear" style="padding-bottom: 0.2rem;border-bottom: 0px">
+					<div class="photo">
+						<img src="../../img/stroremanagea.png" class="bgphoto" />
+						<input type="file" style="display:none;" id="IDcardF" />
+						<div class="close"><img src="../../img/closed_icon.png"></div>
+					</div>
+					<div class="photo">
+						<img src="../../img/stroremanagea.png" class="bgphoto"/>
+						<input type="file" style="display:none;" id="IDcardZ"/>
+						<div class="close"><img src="../../img/closed_icon.png"></div>
+					</div>
+					<div class="photo">
+						<img src="../../img/addphoto.png" onclick="$(this).next().click()"/>
+						<input type="file" style="display:none;" id="IDcardZ"/>
+					</div>
+				</li>
+				<li class="textarea">
+					<textarea placeholder="宝贝描述123"></textarea>
+				</li>
+				<li class="flex">
+					<div>库存</div>
+					<div class="flex_item"><input value="100" type="tel" style="height: 1.22667rem" /></div>
+					<div class="right_icon"><img src="../../img/right_icon2.png" /></div>
+				</li>
+				<li class="flex bs" id="zhekou">	
+					<div>折扣</div>
+					<div class="flex_item"><input value="八折" readonly="readonly" /></div>
+					<div class="right_icon"><img src="../../img/right_icon2.png" /></div>
+				</li>
+				<li id="charID">
+					<div>评价</div>
+					<div class="flex_item"><input readonly="readonly" /></div>
+					<div class="right_icon"><img src="../../img/right_icon2.png" /></div>
+				</li>
+			</ul>
+			<div class='kong'></div>
+			<div class='f flex'>
+				<a class="flex_item downgoods" href="managegoods.html">下架</a>
+				<a class="flex_item delgoods" href="managegoods.html">删除</a>
+				<a class="flex_item sendgoods" href="managegoods.html">发布</a>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+		$(".close").click(function(){
+			$(this).parent().remove();
+		})
+		$(".bs").click(function(){
+	    	$(this).next().show();
+	    	var s = this;
+	    	$(this).next().find("div").click(function(){
+	    		$(s).find("input").val($(this).text());
+	    		$(s).next().hide();
+	    	})
+	    })
+	    $("#charID").click(function(){
+	    	window.location.href = "../user/mineCash.html";
+	    })
+	})
+</script>

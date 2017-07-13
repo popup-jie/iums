@@ -1,0 +1,7 @@
+1、下订单成功 html/center/orderdetailpush.html
+
+2、订单完成 html/center/orderdetailok.html
+
+3、订单在途中 html/center/orderdetailluzhong.html
+
+4、订单待付款 html/center/orderdetailwaitpay.html

@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+	<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+	<meta content="telephone=no, address=no" name="format-detection">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta content="no-cache" http-equiv="pragma">
+	<meta content="0" http-equiv="expires">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<title>听妈妈的话</title>
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css">
+	<link type="text/css" rel="stylesheet" href="css/animate.min.css">
+	<link type="text/css" rel="stylesheet" href="css/reset.css">
+
+</head>
+	
+<body>
+	<div class="loading" style="position: fixed;z-index: 999;background: url(img/bg.png);background-size: 100% 100%;width: 100%;height: 100%;left: 0px;top:0px">
+		<div class="loadingPr" style="width: 150px;position: relative;margin: 0 auto;left:0px;right:0px;background:#fff;height: 6px;top: 50%;margin-top: -3px;border-radius: 8px;overflow: hidden">
+			<div class="loadingBG" style="width: 0%;background: #ed6c00;height: 6px;position: absolute;left: 0px;top: 0px"></div>
+		</div>
+		<div class="loadingText" style="color: #fff;font-size: 16px;text-align: center;margin-top: 80%;">0%</div>
+	</div>
+	<div class="normalmusic"><img src="img/normalmusic.png" /></div>
+	<audio style="display:none; height: 0" id="bg-music" preload="auto" src="img/123.mp3" loop="loop"></audio>
+	<!-- <div class="normalmusic"><img src="img/normalmusic.png" /></div>
+	<audio style="display:none; height: 0" id="bg-music" preload="auto" src="img/123.mp3" loop="loop" autoplay="autoplay"></audio> -->
+	<img src="img/mine_icon3.png" style="display: none" />
+	<img src="img/mine_icon2.png" style="display: none" />
+	<img src="img/fouth_mine2.png" style="display: none" />
+	<img src="img/fouth_mine.png" style="display: none" />
+	<img src="img/fivth_mine2.png" style="display: none" />
+	<img src="img/fivth_mine3.png" style="display: none" />
+	<div class="swiper-container" style="width: 100%;height: 100%;overflow: hidden">
+
+		<div class="swiper-wrapper">
+			<!-- 屏一 -->
+			<section class="one swiper-slide" data-history="1">
+				<div class="ani one_title" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+					<div class="pmx">
+						<img src="img/one_title.png" />
+					</div>
+				</div>
+				<!-- <div class="one_font">
+					<div class="font1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.2s"><img src="img/one_font1.png" /></div>
+					<div class="font2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.3s"><img src="img/one_font2.png" /></div>
+					<div class="font3 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.4s"><img src="img/one_font3.png" /></div>
+					<div class="font4 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.5s"><img src="img/one_font4.png" /></div>
+					<div class="font5 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s"><img src="img/one_font5.png" /></div>
+					<div class="font6 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s"><img src="img/one_font6.png" /></div>
+					<div class="font7 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.8s"><img src="img/one_font7.png" /></div>
+				</div> -->
+				<div class="ani one_people" swiper-animate-effect="bounceIn" swiper-animate-duration="1.2s" swiper-animate-delay="0.5s"><img src="img/one_people.png" /></div>
+				<div class="up"><img src="img/down_icon.png" /></div>
+			</section>
+			<!-- 屏二 -->
+			<section class="two swiper-slide" data-history="2">
+				<div class="flex topflex">
+					<div class="two_font"">
+						<div class="font1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.2s"><img src="img/two_font1.png" /></div>
+						<div class="font2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.3s"><img src="img/two_font2.png" /></div>
+						<div class="font3 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.4s"><img src="img/two_font3.png" /></div>
+						<div class="font4 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.5s"><img src="img/two_font4.png" /></div>
+						<div class="font5 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s"><img src="img/two_font5.png" /></div>
+						<div class="font6 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s"><img src="img/two_font6.png" /></div>
+					</div>
+					<div class="mum" >
+						<img class='ani' src="img/mother_icon.png" swiper-animate-effect="fadeIn" swiper-animate-duration="1.7s" swiper-animate-delay="1.2s" />
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="ani two_people" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+						<img src="img/two_people.png" />
+					</div>
+					<div class="flex">
+						<div class="ani mine" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s"><img src="img/mine_icon.png" /></div>
+						<div class="ani rili" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.8s">
+							<!-- <div class="fomx">向上翻开日历</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="up"><img src="img/down_icon.png" /></div>
+			</section>
+			<!-- 屏三 -->
+			<section class="three swiper-slide" data-history="3">
+				<div class="three_bg ani"  swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" ><img src="img/three_bg.png" class="animated" /></div>
+				<div class="text ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.8s">
+					<img src="img/three_font.png"  />
+				</div>
+				<div class="flex ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.5s">
+					<div class="mine"  >
+						<img src="img/mine_icon2.png" class="img1" />
+						<img src="img/mine_icon.gif" class="hide img2" />
+					</div>
+					<div class="mum">
+						<img src="img/mother_icon2.png" />
+					</div>
+				</div>
+				<div class="btnx ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s"><img src="img/three_btn.png" /></div>
+			</section>
+			<!-- 屏四 -->
+			<section class="fouth swiper-slide" data-history="4">
+				<div class="fouth_one_title ani" style="margin: 0 auto;margin-top: 0.2rem;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.3s">
+					<img src="img/fouth_one_title.png" class="animated" />
+				</div>
+				<div style="clear: both;"></div>
+				<div class="fouth_one ani" style="margin: 0 auto" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s">
+					<img src="img/fouth_one.png"  class="animated" />
+				</div>
+				<div style="clear: both;"></div>
+				<div class="fouth_two_title ani" style="margin: 0 auto;margin-top: 0.1rem;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.9s">
+					<img src="img/fouth_two_title.png"  class="animated" />
+				</div>
+				<div class="fouth_two ani" style="margin: 0 auto;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s">
+					<img src="img/fouth_two.png"  class="animated"/>
+				</div>
+				<div class="flex_item"></div>
+				<div class="people"></div>
+				<div class="btn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.8s"><img src="img/fouth_btn.png" /></div>
+			</section>
+			<!-- 屏五 -->
+			<section class="fivth swiper-slide" data-history="5">
+				<div class="fivth_one_title fr ani" style="margin-right: 0.5rem" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.3s">
+					<img src="img/fivth_one_title.png" class="animated" />
+				</div>
+				<div style="clear: both;"></div>
+				<div class="fivth_one ani" style="margin-left: 1.7rem;margin-top: -0.5rem;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s">
+					<img src="img/fivth_one.png"  class="animated" />
+				</div>
+				<div style="clear: both;"></div>
+				<div class="fivth_two_title ani" style="margin-left: 1.2rem" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.9s">
+					<img src="img/fivth_two_title.png"  class="animated" />
+				</div>
+				<div class="flex">
+					<div class="flex_item"></div>
+					<div class="fivth_two ani" style="margin-right: 0.8rem;margin-top: -0.95rem" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s">
+						<img src="img/fivth_two.png"  class="animated"/>
+					</div>
+				</div>
+				<div class="people" ></div>
+				<div class="btn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.8s" style="margin-top: 0.5rem;"><img src="img/fivth_btn.png" /></div>
+			</section>
+			<!-- 屏六 -->
+			<section class="six swiper-slide" data-history="6">
+				<div class="six_title ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s"><img src="img/six_title.png" /></div>
+				<div class="six_people ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.2s"><img src="img/six_people.png" /></div>
+				<div class="sixPhone ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.4s">
+					<div  class="flex input">
+						<div class="number flex_item">
+							<div class="telephoneNum"></div>
+							<div class="fonta">请输入手机号码</div>
+						</div>
+						<div class="del"></div>
+					</div>
+					<div class="kuang">
+						<div class="flex">
+							<div class="num">1</div>
+							<div class="num" style="margin-left: 0.35rem">2</div>
+							<div class="num" style="margin-left: 0.2rem">3</div>
+						</div>
+						<div class="flex" style="margin-top: 0.1rem;">
+							<div class="num">4</div>
+							<div class="num" style="margin-left: 0.35rem">5</div>
+							<div class="num" style="margin-left: 0.2rem">6</div>
+						</div>
+						<div class="flex" style="margin-top: 0.1rem;">
+							<div class="num">7</div>
+							<div class="num" style="margin-left: 0.35rem">8</div>
+							<div class="num" style="margin-left: 0.2rem">9</div>
+						</div>
+						<div class="flex" style="margin-top: 0.1rem;">
+							<div class="num">*</div>
+							<div class="num" style="margin-left: 0.35rem">0</div>
+							<div class="num" style="margin-left: 0.2rem">#</div>
+						</div>
+						<div class="btn"><img src="img/save_btn.png" /></div>
+					</div>
+				</div>
+				<!-- <div class="btn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s"><img src="img/fivth_btn.png" /></div> -->
+			</section>
+			<!-- 屏七 -->
+			<section class="seven swiper-slide" data-history="7">
+				<div class="seven_people ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.2s"><img src="img/seven_icon.png" /></div>
+				<div class="sixPhone ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.4s">
+					<div  class="flex input" >
+						<div class="number">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						<div class="del"></div>
+					</div>
+				</div>
+				<div class="hand ani" swiper-animate-effect="tranX" swiper-animate-duration="3.2s" swiper-animate-delay="1.5s"><img src="img/hand.png" /></div>
+			</section>
+			<!-- 屏八 -->
+			<section class="eight swiper-slide">
+				<!-- 屏八 男性 -->
+				<div class="eight_boy clear animated" id="eight_boy_one">
+					<div class="title ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.4s"><img src="img/eight_boy_top.png" /></div>
+					<div class="mum fl ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.7s" swiper-animate-delay="0.2s"><img src="img/eight_boy_mum.png" /></div>
+					<div class="icon fr ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.7s" swiper-animate-delay="0.2s"><img src="img/eight_boy_icon.png" /></div>
+				</div>
+				<div class="eight_boy animated" id="eight_boy_two">
+					<div class="eight_boy_bg clear">
+						<div class="people_title"><img src="img/eight_pmx_one_top.png" /></div>
+						<div class="people_one fl"><img src="img/eight_pmx_one.png" /></div>
+						<div class="people_two fl"><img src="img/eight_pmx_one2.png" /></div>
+					</div>
+				</div>
+				<!-- /end 屏八 男性 -->
+				<div id="eight_boy_three" class="boy_btn">
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" ><img src="img/boy_btn.png" /></div>
+				</div>
+				<!-- 屏八 女性 -->
+				<div class="eight_girl clear animated hide" id="eight_girl_one">
+					<div class="title ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.4s"><img src="img/eight_gril_top.png" /></div>
+					<div class="mum fl ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.7s" swiper-animate-delay="0.2s"><img src="img/eight_girl_mum.png" /></div>
+					<div class="icon fr ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.7s" swiper-animate-delay="0.2s"><img src="img/eight_girl_icon.png" /></div>
+				</div>
+
+				<div class="eight_girl animated hide" id="eight_girl_two">
+					<div class="eight_girl_bg clear">
+						<div class="people_title"><img src="img/eight_pmx2_one_top.png" /></div>
+						<div class="people_one fl"><img src="img/eight_pmx2_one.png" /></div>
+						<div class="people_two fl"><img src="img/eight_pmx2_one2.png" /></div>
+					</div>
+				</div>
+				<div id="eight_girl_three" class="boy_btn hide">
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s"><img src="img/girl_btn.png" /></div>
+				</div>
+				<!-- /end 屏八 女性 -->
+			</section>
+			<!-- 屏九 -->
+			<section class="night swiper-slide">
+				<div class="one_font">
+					<!-- <div class="font1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s"><img src="img/night_font1.png" /></div>
+					<div class="font2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay=".2s"><img src="img/night_font2.png" /></div>
+					<div class="font3 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.4s"><img src="img/night_font3.png" /></div> -->
+					<div class="font8 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.2s"><img src="img/night_font8.png" /></div>
+				</div>
+				<div class="peolist ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.5s">
+					<div class="people_one"><img src="img/poeple_one.png" /></div>
+					<div class="people_two"><img src="img/people_two.png" /></div>
+				</div>
+				<div class="one_font">
+					<div class="font6 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s"><img src="img/night_font6.png" /></div>
+					<div class="font7 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.9s"><img src="img/night_font7.png" /></div>
+				</div>
+				<div class="cs clear ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s">
+					<div class="lastBtn fl" style="margin-top: 0px;"><a target="_blank"><img src="img/night_last_btna.png" /></a></div>
+					<div class="downBtna fr"><a target="_blank"><img src="img/downbtna.png" /></a></div>
+					<div style="clear: both"></div>
+					<div class="downBtnb" style="margin: 0 auto;margin-top: 0.15rem;"><a target="_blank"><img src="img/downbtnb.png" /></a></div>
+				</div>
+				<!-- <div class="downBtn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s"> -->
+					<!-- <a target="_blank"><img src="img/downbtn.png" /></a> -->
+				<!-- </div> -->
+			</section>
+			<!-- /end 屏九 -->
+		</div>
+	</div>
+	<!-- <div class="footer hide animated">
+		<div class="footer_bg">
+			<img src="img/bg-cir.png" />
+			<div class="shan"><img src="img/shan.png" /></div>
+		</div>
+		
+	</div> -->
+
+</body>
+</html>
+<script type="text/javascript" src='js/zepto.min.js'></script>
+<!-- <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxRecord.js"></script> -->
+
+<!--<script src="//salescdn.pa18.com/salesinfo/eLifeAssist/common/wxRecord.js"></script>-->
+<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript" src="js/swiper.animate.min.js"></script>
+<script type="text/javascript">
+	var pma = 0;
+	var audio;
+	setTimeout(function(){
+		pma+=2;
+		$('.loadingBG').width(pma + "%");
+		$(".loadingText").text(pma + "%");
+		if(pma>=100){
+			$('.loading').hide();
+			//document.addEventListener('DOMContentLoaded', function(){
+			    audio = document.getElementById('bg-music');    
+			    function audioAutoPlay() {
+			            audio.play();
+			            document.addEventListener("WeixinJSBridgeReady", function () {
+			            audio.play();
+			        }, false);
+			    }
+			    audioAutoPlay();
+			    $(".normalmusic").addClass("maikecir2");
+			    $(".normalmusic").click(function(){
+			        if($(".normalmusic").hasClass("maikecir2")){
+			            audio.pause();
+			            $(".normalmusic").removeClass("maikecir2");
+			        }
+			        else{
+			            $(".normalmusic").addClass("maikecir2");
+			            audio.play();
+			        }
+			    })
+			   // }, false);
+
+		}else{
+			setTimeout(arguments.callee,30);
+		}
+	},30);
+		
+	function getQueryString(name) { 
+	    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	    var r = window.location.search.substr(1).match(reg); 
+	    if (r != null) return unescape(r[2]); return null; 
+	}
+	//https://salescdn.pa18.com/salesinfo/eLifeAssist/html/productDetail.html?agentNo=URL地址栏取&productNo=1182&interFace=& visitSwitch=off&tmp=时间戳
+	var _parentCode = getQueryString("parentCode");
+	var _agentNo = getQueryString("agentNo");
+	var Time = new Date().getTime();
+	// timestamp
+
+	var _productNo = getQueryString("productNo");
+	// $(".downBtn").find("a").attr("href","https://salescdn.pa18.com/salesinfo/eLifeAssist/html/productDetail.html?agentNo="+_agentNo+"&productNo=3028&interFace=&visitSwitch=off&tmp="+ Time + "&parentCode=" + _parentCode);
+	$(".downBtna").find("a").attr("href","https://salescdn.pa18.com/salesinfo/eLifeAssist/html/productDetail.html?agentNo="+_agentNo+"&productNo=3028&interFace=&visitSwitch=off&tmp="+ Time + "&parentCode=" + _parentCode);
+	$(".downBtnb").find("a").attr("href","https://elis-ecocdn.pingan.com.cn/lilith/static/downloads/index.html");
+
+	$(".lastBtn").find("a").attr("href","https://salescdn.pa18.com/salesinfo/eLifeAssist/html/productDetail.html?agentNo="+_agentNo+"&productNo=1182&interFace=&visitSwitch=off&tmp="+ Time + "&parentCode=" + _parentCode);
+</script>
+<script type="text/javascript" src='js/size.js'></script>
+<script type="text/javascript" src='js/main.js'></script>

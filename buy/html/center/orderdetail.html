@@ -1,0 +1,172 @@
+<html>
+	<head>
+		<title>全部订单</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../../css/center.css">
+		<link rel="stylesheet" type="text/css" href="../../css/dropload.min.css">
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/dropload.min.js"></script>
+		<script type="text/javascript" src="../../js/size.js"></script>
+	</head>
+	<body>
+
+		<div class="order order_detail">	
+			<div class="topFiexdBtn">
+				<div class="returnBtn"><img src="../../img/back_icon.png" /></div>
+				<div>全部订单</div>
+			</div>
+			<div class="kong2"></div>
+			<div class="nav flex" style="top: 1rem;">
+				<div class="flex_item on" id="all">全部</div>
+				<div class="flex_item" id="pay">待付款</div>
+				<div class="flex_item" id="get">待收货</div>
+				<div class="flex_item" id="chat">待评价</div>
+			</div>
+			<div style="height: 1.08rem;position: relative;"></div>
+			<div class="item_info">
+				<div class="topb flex">
+					<div class="flex_item">
+						<img src="../../img/store_icon.png">
+						商铺名字
+					</div>
+					<div class="rems">
+						交易成功
+					</div>
+				</div>
+				<ul>
+					<li class="item_list">
+						<a href="orderdetailok.html">
+							<div class="item flex">
+								<div class="photo"><img src="../../img/itema.png" /></div>
+								<div class="flex_item">
+									<div class="t">商品名字商品名字商品名字商品名字商品名字</div>
+									<div class="tr">颜色分类：深蓝色，尺码：XL</div>
+									<div class="money">
+										<div class="fl">¥<span>5,199.00</span></div>
+										<div class="fr">X<span>1</span></div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="orderdetailok.html">
+							<div class="item flex">
+								<div class="photo"><img src="../../img/itema.png" /></div>
+								<div class="flex_item">
+									<div class="t">商品名字商品名字商品名字商品名字商品名字</div>
+									<div class="tr">颜色分类：深蓝色，尺码：XL</div>
+									<div class="money">
+										<div class="fl">¥<span>5,199.00</span></div>
+										<div class="fr">X<span>1</span></div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<div class="count all">
+					共1件商品   合计:¥5199.00
+				</div>
+				<div class="order_btn flex">
+					<div class="flex_item"></div>
+					<div class="order_btn_b del">删除订单</div>
+					<div class="order_btn_b on"><a href="../user/myChat.html">评价</a></div>
+				</div>
+			</div>
+			<div class="item_info">
+				<div class="topb flex">
+					<div class="flex_item">
+						<img src="../../img/store_icon.png">
+						商铺名字
+					</div>
+					<div class="rems">
+						交易成功
+					</div>
+				</div>
+				<ul>
+					<li class="item_list">
+						<a href="orderdetailok.html">
+							<div class="item flex">
+								<div class="photo"><img src="../../img/itema.png" /></div>
+								<div class="flex_item">
+									<div class="t">商品名字商品名字商品名字商品名字商品名字</div>
+									<div class="tr">颜色分类：深蓝色，尺码：XL</div>
+									<div class="money">
+										<div class="fl">¥<span>5,199.00</span></div>
+										<div class="fr">X<span>1</span></div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="orderdetailok.html">
+							<div class="item flex">
+								<div class="photo"><img src="../../img/itema.png" /></div>
+								<div class="flex_item">
+									<div class="t">商品名字商品名字商品名字商品名字商品名字</div>
+									<div class="tr">颜色分类：深蓝色，尺码：XL</div>
+									<div class="money">
+										<div class="fl">¥<span>5,199.00</span></div>
+										<div class="fr">X<span>1</span></div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<div class="count all">
+					共1件商品   合计:¥5199.00
+				</div>
+				<div class="order_btn flex">
+					<div class="flex_item"></div>
+					<div class="order_btn_b del">删除订单</div>
+					<div class="order_btn_b on"><a href="../user/myChat.html">评价</a></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$(".returnBtn").click(function(){
+			history.back()
+		})
+		$(".nav div").click(function(){
+			$(this).addClass("on").siblings().removeClass("on");
+		})
+		$('.order').dropload({
+	        scrollArea : window,
+	        loadDownFn : function(me){
+	        	setTimeout(function(){
+                    me.resetload();
+                },1000);
+                if($("#all").hasClass("on")){
+		    		//这里是全部订单
+		    	}
+		    	else if($("#pay").hasClass("on")){
+		    		//这里是待付款订单
+		    	}
+		    	else if($("#get").hasClass("on")){
+		    		//这里是待收货订单
+		    	}
+		    	else if($("#chat").hasClass("on")){
+		    		//这里是待评价订单
+		    	}
+	        }
+	    });
+	    $(".order_btn .del").click(function(){
+	    	$(this).parents(".item_info").remove();
+	    })
+	})
+</script>
